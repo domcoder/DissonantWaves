@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/10 Prologue.rpy", line 24: expected 'image_name_component' not found.
+    show (LukeChar.images("happy")) at halfright
+         ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Fri Apr 25 15:17:13 2025
