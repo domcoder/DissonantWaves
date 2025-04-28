@@ -56,7 +56,7 @@ image Willow neutral:
 # Side Cast Images
 image Claire happy:
     "Claire_happy.png"
-image Claire happy:
+image Claire worried:
     "Claire_worried.png"
 
 image Captain neutral:

@@ -1,8 +1,6 @@
 # Defining new positions
-
 # Anchor sets the selection point to the middle of the image (problems if differently-sized)
 # Pos sets them at three-quarters their height on screen and places them to a position
-
 transform farleft:
     anchor (0.5, 0.5)
     pos (1/6, 0.75)

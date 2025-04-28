@@ -1,26 +1,41 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/10 Prologue.rpy", line 141, in script
-    $ Ray.n = playerName
-  File "game/10 Prologue.rpy", line 141, in <module>
-    $ Ray.n = playerName
+  File "game/10 Prologue.rpy", line 157, in script
+    Claire.c "Wonderful, that's three hot chocolates with extra cream, extra marshmallows and a little umbrella out to May, Luke and [Ray.n]. I'll be back shortly."
 NameError: name 'Ray' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/10 Prologue.rpy", line 141, in script
-    $ Ray.n = playerName
-  File "C:\Users\dom\RenPy\renpy837sdk\renpy\ast.py", line 834, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\dom\RenPy\renpy837sdk\renpy\python.py", line 1187, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/10 Prologue.rpy", line 141, in <module>
-    $ Ray.n = playerName
+  File "game/10 Prologue.rpy", line 157, in script
+    Claire.c "Wonderful, that's three hot chocolates with extra cream, extra marshmallows and a little umbrella out to May, Luke and [Ray.n]. I'll be back shortly."
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\ast.py", line 2586, in execute
+    Say.execute(self)
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\ast.py", line 623, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\character.py", line 1456, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\character.py", line 1369, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\character.py", line 1349, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\python.py", line 1218, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
 NameError: name 'Ray' is not defined
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Dissonant Waves 1.0
-Mon Apr 28 18:59:43 2025
+Mon Apr 28 20:07:01 2025

@@ -6,13 +6,6 @@ init python:
     # Temporary Ray
     TempRay = PlayerCharacter(Character("You"), name = "")
 
-    # Ray character as created after naming during prologue
-    # Ray = PlayerCharacter(
-    #    character = Character("Ray"), 
-    #    name = ""
-    #    )
-
-
     # Home crew
     Luke = Person(
         character = Character("Luke", image = "Luke"), 

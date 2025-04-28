@@ -145,13 +145,14 @@ label Act0:
                             Claire.c @ worried "I swear on your aunt's flowerbeds, do not make me come over there and rename you myself."
                             "Claire stares at me for a moment and then brightens up again."
                         elif clairePatience == 0:
-                            $ Ray.n = "Ray"  
+                            $ playerName = "Ray"  
                             jump Act0_Diner3
                         jump namingRay
         jump Act0_Diner3
 
     label Act0_Diner3:
-        $ Ray = PlayerCharacter(Character(playerName),name = playerName)
+        $ Ray = PlayerCharacter(Character(playerName), playerName)
+        pause(1)
 
         Claire.c "Wonderful, that's three hot chocolates with extra cream, extra marshmallows and a little umbrella out to May, Luke and [Ray.n]. I'll be back shortly."
         "Claire smiles one more time before leaving to make our drinks."
