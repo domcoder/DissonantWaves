@@ -1,4 +1,4 @@
-#Reminder: Don't feed josh too many compliments - they'll get to his head.
+#Reminder: Don't feed josh too many compliments - they'll go to his head.
 label Act0:
     label Act0_Diner1:
         #Prologue, Scene 1 - Diner
@@ -717,7 +717,7 @@ label Act0:
                     Ray.c "Fine, the island will be full of supermodels, just waiting for your affection."
                     Luke.c "Now that's more like it."
 
-            label Diner_6:
+            label Act0_Diner8:
                 show Luke neutral
                 Ray.c "May's gone for one minute and you're already perving around."
                 show Luke happy
@@ -734,15 +734,15 @@ label Act0:
 
                 menu:
                     "Reassure him":
-                        jump Diner_Reassure_6
+                        jump Act0_Diner8_Choice1_Option1
                     "Make fun of him":
-                        jump Diner_Make_Fun_6
+                        jump Act0_Diner8_Choice1_Option2
                     "Make fun of him (sarcastically)":
-                        jump Diner_Sarcasm_6
+                        jump Act0_Diner8_Choice1_Option3
                     "Comfort him":
-                        jump Diner_Comfort_6
+                        jump Act0_Diner8_Choice1_Option4
 
-                label Diner_Reassure_6:
+                label Act0_Diner8_Choice1_Option1:
                     Ray.c "I know, I do too."
                     Luke.c "Sometimes I wish she didn't take that job at all."
                     Ray.c "You know it was what she wanted. It was what's best for her."
@@ -762,9 +762,9 @@ label Act0:
                     Luke.c "I know, dude. That's why we're bezzie mates."
 
                     $ Ray.friendly += 1
-                    jump Diner_7
+                    jump Act0_Diner9
 
-                label Diner_Make_Fun_6:
+                label Act0_Diner8_Choice1_Option2:
                     Ray.c "She's been gone 5 minutes dude. Grow up."
 
                     show Luke worried
@@ -784,9 +784,9 @@ label Act0:
                     Luke.c "That's why we're bezzie mates."
 
                     $ Ray.direct += 1
-                    jump Diner_7
+                    jump Act0_Diner9
 
-                label Diner_Sarcasm_6:
+                label Act0_Diner8_Choice1_Option3:
                     Ray.c "Welp, she's out the door now. You'll have to propose some other time."
 
                     show Luke worried
@@ -809,9 +809,9 @@ label Act0:
                     Luke.c "Yeah, but I appreciated it, that's why we're bezzie mates."
 
                     $ Ray.sarcastic += 1
-                    jump Diner_7
+                    jump Act0_Diner9
 
-                label Diner_Comfort_6:
+                label Act0_Diner8_Choice1_Option4:
                     "I put my hand on his shoulder and try to muster up my most encouraging smile. I wish there was something I could say or something
                     I could do to put Luke at ease. Whatever I did, it seemed to help Luke enough."
 
@@ -838,9 +838,9 @@ label Act0:
                     Luke.c "Thanks, that's why we're bezzie mates."
 
                     $ Ray.shy += 1
-                    jump Diner_7
+                    jump Act0_Diner9
                     
-    label Diner_7:
+    label Act0_Diner9:
         Ray.c "You know, you're the only one who says that."
         Luke.c "Says what?"
         Ray.c "‘Bezzie mates.'"
@@ -899,9 +899,9 @@ label Act0:
         "Luke falters slightly, Claire giggles away to herself behind the counter. Typical Luke, his mood flip flops more than a light switch."
         Luke.c worried "Shit."
 
-        jump Plane_1
+        jump Act0_Plane1
 
-    label Plane_1:
+    label Act0_Plane1:
         #Prologue, Scene 3 - Plane
         #CG of [Ray.n]'s POV in plane with Luke to the side, looking at a tablet with the names of each contestant for the plane ride.
         #Over the top, the chosen characters will appear and present their videos.
@@ -949,7 +949,7 @@ label Act0:
                 enough to be selected so I can make the most of it."
 
                 $ Intro_Vid_Feelings = 1
-                jump Plane_2
+                jump Act0_Plane2
 
             "Annoying":
                 "Annoying. I had never done anything like this before and honestly, I am already half prepared to quit."
@@ -957,7 +957,7 @@ label Act0:
                 Whatever. I'm mainly doing this for May but we'll see what happens."
 
                 $ Intro_Vid_Feelings = 2
-                jump Plane_2
+                jump Act0_Plane2
 
             "Funny":
                 "Funny. I had never done anything like this before and honestly, I think it'll be hilarious how it all turns out."
@@ -966,7 +966,7 @@ label Act0:
                 Anything could happen."
 
                 $ Intro_Vid_Feelings = 3
-                jump Plane_2
+                jump Act0_Plane2
 
             "Terrifying":
                 "Terrifying. I had never done anything like this before and honestly, I am dreading every second. What if I mess up?"
@@ -974,9 +974,9 @@ label Act0:
                 don't think I'll ever be comfortable being so vulnerable to so many people like this. Still, we'll see what happens."
 
                 $ Intro_Vid_Feelings = 4
-                jump Plane_2
+                jump Act0_Plane2
 
-    label Plane_2:
+    label Act0_Plane2:
         """Whatever I feel, or whatever I think it doesn't actually matter because there is literally nothing I can do to prepare myself.
 
         Which is the most frustrating thing, I'm caught in a limbo of running myself round in circles trying to wrap my head around my
@@ -1078,7 +1078,7 @@ label Act0:
             "Next":
                 jump Intro_Vid_2
             "Stop":
-                jump Plane_3
+                jump Act0_Plane3
 
     label Intro_Vid_2:
         menu:
@@ -1170,7 +1170,7 @@ label Act0:
             "Next":
                 jump Intro_Vid_3
             "Stop":
-                jump Plane_3
+                jump Act0_Plane3
 
     label Intro_Vid_3:
         menu:
@@ -1237,7 +1237,7 @@ label Act0:
             "Next":
                 jump Intro_Vid_4
             "Stop":
-                jump Plane_3
+                jump Act0_Plane3
 
     label Intro_Vid_4:
         menu:
@@ -1327,9 +1327,9 @@ label Act0:
             "Next":
                 jump Intro_Vid_1
             "Stop":
-                jump Plane_3
+                jump Act0_Plane3
 
-    label Plane_3:
+    label Act0_Plane3:
         if Watch_Intro_Vid == False:
             "Actually, I don’t want to look at any videos. I’ll keep it a surprise.
             Maybe I’ll just peruse some of the articles around the show, though it basically just goes over what I already know."
@@ -1372,9 +1372,9 @@ label Act0:
         "{i}The weather in Auckland is clear and sunny, with a high of 25 degrees for this afternoon. If the weather continues to cooperate you should
         get a great view of the city as we descend. We thank you for flying with us and hope you've enjoyed the ride."
 
-        jump Ship_1
+        jump Act0_Ship1
 
-    label Ship_1:
+    label Act0_Ship1:
         scene bg ship
 
         "Almost as soon as we landed Luke and I were getting ushered various ways, having catch up to a suited man who’s walking speed gave track stars a run for their money. 
@@ -1547,9 +1547,9 @@ label Act0:
         Luke.c "Sure, we just wanted to ask a few more questions if that’s alright."
         Shane.c "Sure, kid. I’ve got 5, shoot."
 
-        jump Ship_2
+        jump Act0_Ship2
 
-    label Ship_2:
+    label Act0_Ship2:
         menu:
             "Island":
                 if Shane_Time_Limit < 1:
@@ -1570,13 +1570,13 @@ label Act0:
                 So long as you stick around camp maybe the outskirts of the forest, the beach and the cliff, you’ll be fine."""
 
                 $ Shane_Time_Limit += -1
-                jump Ship_2
+                jump Act0_Ship2
 
             "Voting":
                 if Shane_Time_Limit < 1:
                     Shane.c "Clock is ticking guys. You'll have to find that out yourself. I'll be off."
 
-                    jump Ship_3
+                    jump Act0_Ship3
 
                 Ray.c "How does the whole voting thing work?"
                 Shane.c "There’s nothing for you to do, other than be likeable I guess. We won’t tell you when a vote is about to happen, just to keep your reactions and
@@ -1585,13 +1585,13 @@ label Act0:
                 Of course you can’t ask for just anything, but we’ll do our best to cater to what you want."
 
                 $ Shane_Time_Limit += -1
-                jump Ship_2
+                jump Act0_Ship2
 
             "Challenges":
                 if Shane_Time_Limit < 1:
                     Shane.c "Clock is ticking guys. You'll have to find that out yourself. I'll be off."
 
-                    jump Ship_3
+                    jump Act0_Ship3
 
                 Luke.c "What about the challenges?"
                 Shane.c "Ah, you’ll have to wait and see. Don’t worry, we’re not about to force you to eat cockroaches or sleep next to snakes.
@@ -1599,13 +1599,13 @@ label Act0:
                 so it’ll mainly be team based stuff."
 
                 $ Shane_Time_Limit += -1
-                jump Ship_2
+                jump Act0_Ship2
 
             "Show":
                 if Shane_Time_Limit < 1:
                     Shane.c "Clock is ticking guys. You'll have to find that out yourself. I'll be off."
 
-                    jump Ship_3
+                    jump Act0_Ship3
 
                 Luke.c "Anything you can tell us about the show as a whole?"
                 Shane.c "My boss’ whole idea for the show is to get real people together and see how well they can cooperate.
@@ -1617,9 +1617,9 @@ label Act0:
                 Shane.c "Think of it as a place to just vent your frustrations or something, we’ll edit it all down to the juicy bits made for television."
 
                 $ Shane_Time_Limit += -1
-                jump Ship_2
+                jump Act0_Ship2
 
-    label Ship_3:
+    label Act0_Ship3:
         "After watching Shane saunter off, Luke clicks his neck, rolls his shoulders and does a bit of stretching."
 
         hide Shane neutral
