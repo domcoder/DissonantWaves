@@ -1,14 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/10 Prologue.rpy", line 157, in script
+  File "game/10 Prologue.rpy", line 159, in script
     Claire.c "Wonderful, that's three hot chocolates with extra cream, extra marshmallows and a little umbrella out to May, Luke and [Ray.n]. I'll be back shortly."
 NameError: name 'Ray' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/10 Prologue.rpy", line 157, in script
+  File "game/10 Prologue.rpy", line 159, in script
     Claire.c "Wonderful, that's three hot chocolates with extra cream, extra marshmallows and a little umbrella out to May, Luke and [Ray.n]. I'll be back shortly."
   File "C:\Users\dom\RenPy\renpy837sdk\renpy\ast.py", line 2586, in execute
     Say.execute(self)
@@ -38,4 +38,4 @@ NameError: name 'Ray' is not defined
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Dissonant Waves 1.0
-Mon Apr 28 20:07:01 2025
+Mon Apr 28 20:15:23 2025

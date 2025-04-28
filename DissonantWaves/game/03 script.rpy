@@ -6,6 +6,10 @@ init python:
     # Temporary Ray
     TempRay = PlayerCharacter(Character("You"), name = "")
 
+    def assignRay(customName):
+        global Ray
+        Ray = PlayerCharacter(Character(customName), customName)
+
     # Home crew
     Luke = Person(
         character = Character("Luke", image = "Luke"), 

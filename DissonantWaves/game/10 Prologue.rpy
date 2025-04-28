@@ -151,8 +151,8 @@ label Act0:
         jump Act0_Diner3
 
     label Act0_Diner3:
-        $ Ray = PlayerCharacter(Character(playerName), playerName)
-        pause(1)
+        #$ Ray = PlayerCharacter(Character(playerName), playerName)
+        $ assignRay(playerName)
 
         Claire.c "Wonderful, that's three hot chocolates with extra cream, extra marshmallows and a little umbrella out to May, Luke and [Ray.n]. I'll be back shortly."
         "Claire smiles one more time before leaving to make our drinks."
