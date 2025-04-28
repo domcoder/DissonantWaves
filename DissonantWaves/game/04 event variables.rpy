@@ -1,8 +1,7 @@
 # Character Stats
 init python:
     # Act 0
-    NameCount = 5
-    NameChosen = False
+
     Watch_Intro_Vid = False
     Intro_Vid_Feelings = 0
 

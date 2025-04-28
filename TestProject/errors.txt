@@ -1,0 +1,9 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 8: invalid syntax
+        def __init__ (self, character, name)
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Mon Apr 28 18:07:06 2025

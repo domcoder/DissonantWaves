@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/10 Prologue.rpy", line 26, in script
-    $ LukeChar.speak("Yeah, I know, but think about it.")
-  File "game/10 Prologue.rpy", line 26, in <module>
-    $ LukeChar.speak("Yeah, I know, but think about it.")
-AttributeError: 'Person' object has no attribute 'speak'
+  File "game/10 Prologue.rpy", line 141, in script
+    $ Ray.n = playerName
+  File "game/10 Prologue.rpy", line 141, in <module>
+    $ Ray.n = playerName
+NameError: name 'Ray' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/10 Prologue.rpy", line 26, in script
-    $ LukeChar.speak("Yeah, I know, but think about it.")
-  File "C:\Users\dom\RenPy\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
+  File "game/10 Prologue.rpy", line 141, in script
+    $ Ray.n = playerName
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\dom\RenPy\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+  File "C:\Users\dom\RenPy\renpy837sdk\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/10 Prologue.rpy", line 26, in <module>
-    $ LukeChar.speak("Yeah, I know, but think about it.")
-AttributeError: 'Person' object has no attribute 'speak'
+  File "game/10 Prologue.rpy", line 141, in <module>
+    $ Ray.n = playerName
+NameError: name 'Ray' is not defined
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Dissonant Waves 1.0
-Fri Apr 25 15:13:30 2025
+Mon Apr 28 18:59:43 2025

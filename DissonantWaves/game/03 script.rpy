@@ -3,348 +3,325 @@
 
 # Initialising Ray
 init python:
-    # Ray
-    Ray = Character("Ray")
-    RayChar = PlayerCharacter(
-        character = Ray, 
-        name = ""
-        )
+    # Temporary Ray
+    TempRay = PlayerCharacter(Character("You"), name = "")
+
+    # Ray character as created after naming during prologue
+    # Ray = PlayerCharacter(
+    #    character = Character("Ray"), 
+    #    name = ""
+    #    )
 
 
     # Home crew
-    Luke = Character("Luke")
-    LukeChar = Person(
-        character = Luke, 
+    Luke = Person(
+        character = Character("Luke", image = "Luke"), 
         name = "Luke",
         tagline = "Bestest friendo",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Luke Neutral",
-            "happy": "Luke Happy",
-            "worried": "Luke Worried"
+            "neutral": "Luke neutral",
+            "happy": "Luke happy",
+            "worried": "Luke worried"
             }
         )
 
-    May = Character("May")
-    MayChar = Person(
-        character = May, 
+    May = Person(
+        character = Character("May", image = "May"), 
         name = "May",
         tagline = "They grow up so fast",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "May Neutral",
-            "happy": "May Happy",
-            "worried": "May Worried"
+            "neutral": "May neutral",
+            "happy": "May happy",
+            "worried": "May worried"
             }
         )    
 
 
     # Island cast
-    Jason = Character("Jason")
-    JasonChar = Person(
-        character = Jason, 
+    Jason = Person(
+        character = Character("Jason", image = "Jason"), 
         name = "Jason",
         tagline = "King of edge",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Jason Neutral",
-            "happy": "Jason Happy",
-            "worried": "Jason Worried"
+            "neutral": "Jason neutral",
+            "happy": "Jason happy",
+            "worried": "Jason worried"
             }
         )    
 
-    Arthur = Character("Arthur")
-    ArthurChar = Person(
-        character = Arthur, 
+    Arthur = Person(
+        character = Character("Arthur", image = "Arthur"), 
         name = "Arthur",
         tagline = "Riddle me this",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Arthur Neutral",
-            "happy": "Arthur Happy",
-            "worried": "Arthur Worried"
+            "neutral": "Arthur neutral",
+            "happy": "Arthur happy",
+            "worried": "Arthur worried"
             }
         )    
 
-    Senna = Character("Senna")
-    SennaChar = Person(
-        character = Senna, 
+    Senna = Person(
+        character = Character("Senna", image = "Senna"), 
         name = "Senna",
         affection = 1-1,
         tagline = "Aka Zed, ",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Senna Neutral",
-            "happy": "Senna Happy",
-            "worried": "Senna Worried"
+            "neutral": "Senna neutral",
+            "happy": "Senna happy",
+            "worried": "Senna worried"
             }
         )    
 
-    Willow = Character("Willow")
-    WillowChar = Person(
-        character = Willow, 
+    Willow = Person(
+        character = Character("Willow", image = "Willow"), 
         name = "Willow",
         tagline = "Once a Raven",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Willow Neutral",
-            "happy": "Willow Happy",
-            "worried": "Willow Worried"
+            "neutral": "Willow neutral",
+            "happy": "Willow happy",
+            "worried": "Willow worried"
             }
         )    
 
-    Camilla = Character("Camilla")
-    CamillaChar = Person(
-        character = Camilla, 
+    Camilla = Person(
+        character = Character("Camilla", image = "Camilla"), 
         name = "Camilla",
         tagline = "Into the Iris",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Camilla Neutral",
-            "happy": "Camilla Happy",
-            "worried": "Camilla Worried"
+            "neutral": "Camilla neutral",
+            "happy": "Camilla happy",
+            "worried": "Camilla worried"
             }
         )    
 
-    Addison = Character("Addison")
-    AddisonChar = Person(
-        character = Addison, 
+    Addison = Person(
+        character = Character("Addison", image = "Addison"), 
         name = "Addison",
         tagline = "Pep time",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Addison Neutral",
-            "happy": "Addison Happy",
-            "worried": "Addison Worried"
+            "neutral": "Addison neutral",
+            "happy": "Addison happy",
+            "worried": "Addison worried"
             }
         )   
 
-    Cain = Character("Cain")
-    CainChar = Person(
-        character = Cain, 
+    Cain = Person(
+        character = Character("Cain", image = "Cain"), 
         name = "Cain",
         tagline = "Cappin' Cain",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Cain Neutral",
-            "happy": "Cain Happy",
-            "worried": "Cain Worried"
+            "neutral": "Cain neutral",
+            "happy": "Cain happy",
+            "worried": "Cain worried"
             }
         )   
 
-    Riley = Character("Riley")
-    RileyChar = Person(
-        character = Riley, 
+    Riley = Person(
+        character = Character("Riley", image = "Riley"), 
         name = "Riley",
         tagline = "A Valentine worth remembering",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Riley Neutral",
-            "happy": "Riley Happy",
-            "worried": "Riley Worried"
+            "neutral": "Riley neutral",
+            "happy": "Riley happy",
+            "worried": "Riley worried"
             }
         )   
 
-    Aaron = Character("Aaron")
-    AaronChar = Person(
-        character = Aaron, 
+    Aaron = Person(
+        character = Character("Aaron", image = "Aaron"), 
         name = "Aaron",
         tagline = "NORMALGUY",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Aaron Neutral",
-            "happy": "Aaron Happy",
-            "worried": "Aaron Worried"
+            "neutral": "Aaron neutral",
+            "happy": "Aaron happy",
+            "worried": "Aaron worried"
             }
         )   
 
-    Charlotte = Character("Charlotte")
-    CharlotteChar = Person(
-        character = Charlotte, 
+    Charlotte = Person(
+        character = Character("Charlotte", image = "Charlotte"), 
         name = "Charlotte",
         tagline = "Ms connections",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Charlotte Neutral",
-            "happy": "Charlotte Happy",
-            "worried": "Charlotte Worried"
+            "neutral": "Charlotte neutral",
+            "happy": "Charlotte happy",
+            "worried": "Charlotte worried"
             }
         )   
 
-    Nick = Character("Nick")
-    NickChar = Person(
-        character = Nick, 
+    Nick = Person(
+        character = Character("Nick", image = "Nick"), 
         name = "Nick",
         tagline = "A dashing draconic figure",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Nick Neutral",
-            "happy": "Nick Happy",
-            "worried": "Nick Worried"
+            "neutral": "Nick neutral",
+            "happy": "Nick happy",
+            "worried": "Nick worried"
             }
         )   
 
-    Elliot = Character("Elliot")
-    ElliotChar = Person(
-        character = Elliot, 
+    Elliot = Person(
+        character = Character("Elliot", image = "Elliot"), 
         name = "Elliot",
         tagline = "Cutest boi",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Elliot Neutral",
-            "happy": "Elliot Happy",
-            "worried": "Elliot Worried"
+            "neutral": "Elliot neutral",
+            "happy": "Elliot happy",
+            "worried": "Elliot worried"
             }
         )   
 
-    Emma = Character("Emma")
-    EmmaChar = Person(
-        character = Emma, 
+    Emma = Person(
+        character = Character("Emma", image = "Emma"), 
         name = "Emma",
         tagline = "Would have made a great Sophia",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Emma Neutral",
-            "happy": "Emma Happy",
-            "worried": "Emma Worried"
+            "neutral": "Emma neutral",
+            "happy": "Emma happy",
+            "worried": "Emma worried"
             }
         )   
 
-    Juliette = Character("Juliette")
-    JulietteChar = Person(
-        character = Juliette, 
+    Juliette = Person(
+        character = Character("Juliette", image = "Juliette"), 
         name = "Juliette",
         tagline = "Queen of Sweissland, princess of noodling",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Juliette Neutral",
-            "happy": "Juliette Happy",
-            "worried": "Juliette Worried"
+            "neutral": "Juliette neutral",
+            "happy": "Juliette happy",
+            "worried": "Juliette worried"
             }
         )   
 
-    Alek = Character("Alek")
-    AlekChar = Person(
-        character = Alek, 
+    Alek = Person(
+        character = Character("Alek", image = "Alek"), 
         name = "Alek",
         tagline = "Has chicken leg",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Alek Neutral",
-            "happy": "Alek Happy",
-            "worried": "Alek Worried"
+            "neutral": "Alek neutral",
+            "happy": "Alek happy",
+            "worried": "Alek worried"
             }
         )   
 
-    Star = Character("Star")
-    StarChar = Person(
-        character = Star, 
+    Star = Person(
+        character = Character("Star", image = "Star"), 
         name = "Star",
         affection = 80085,
         tagline = "Or is it black?",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Star Neutral",
-            "happy": "Star Happy",
-            "worried": "Star Worried"
+            "neutral": "Star neutral",
+            "happy": "Star happy",
+            "worried": "Star worried"
             }
         )   
 
-    Javier = Character("Javier")
-    JavierChar = Person(
-        character = Javier, 
+    Javier = Person(
+        character = Character("Javier", image = "Javier"), 
         name = "Javier",
         tagline = "Now who's laughing",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Javier Neutral",
-            "happy": "Javier Happy",
-            "worried": "Javier Worried"
+            "neutral": "Javier neutral",
+            "happy": "Javier happy",
+            "worried": "Javier worried"
             }
         )   
 
-    Joe = Character("Joe")
-    JoeChar = Person(
-        character = Joe, 
+    Joe = Person(
+        character = Character("Joe", image = "Joe"), 
         name = "Joe",
         tagline = "A wishful fantasy",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Joe Neutral",
-            "happy": "Joe Happy",
-            "worried": "Joe Worried"
+            "neutral": "Joe neutral",
+            "happy": "Joe happy",
+            "worried": "Joe worried"
             }
         )   
 
-    Toast = Character("Toast")
-    ToastChar = Person(
-        character = Toast, 
+    Toast = Person(
+        character = Character("Toast", image = "Toast"), 
         name = "Toast",
         tagline = "Goodest boi",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Toast Neutral",
-            "happy": "Toast Happy",
-            "worried": "Toast Worried"
+            "neutral": "Toast neutral",
+            "happy": "Toast happy",
+            "worried": "Toast worried"
             }
         )   
 
 
     # Supporting cast
-    Shane = Character("Shane")
-    ShaneChar = Person(
-        character = Shane, 
+    Shane = Person(
+        character = Character("Shane", image = "Shane"), 
         name = "Shane",
         tagline = "Ambition is volatile",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Shane Neutral",
-            "happy": "Shane Happy",
-            "worried": "Shane Worried"
+            "neutral": "Shane neutral",
+            "happy": "Shane happy",
+            "worried": "Shane worried"
             }
         )   
 
-    Goruka = Character("Goruka")
-    GorukaChar = Person(
-        character = Goruka, 
+    Goruka = Person(
+        character = Character("Goruka", image = "Goruka"), 
         name = "Goruka",
         tagline = "Memories of a city of dusk",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Goruka Neutral",
-            "happy": "Goruka Happy",
-            "worried": "Goruka Worried"
+            "neutral": "Goruka neutral",
+            "happy": "Goruka happy",
+            "worried": "Goruka worried"
             }
         )   
 
-    Claire = Character("Claire")
-    ClaireChar = Person(
-        character = Claire, 
+    Claire = Person(
+        character = Character("Claire", image = "Claire"), 
         name = "Claire",
         tagline = "Memories of a city of dusk",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Claire Neutral",
-            "happy": "Claire Happy",
-            "worried": "Claire Worried"
+            "neutral": "Claire neutral",
+            "happy": "Claire happy",
+            "worried": "Claire worried"
             }
         )   
 
-    Unknown = Character("Unknown")
-    UnknownChar = Person(
-        character = Unknown, 
+    Unknown = Person(
+        character = Character("Unknown", image = "Unknown"), 
         name = "Unknown",
         tagline = "Memories of a city of dusk",
-        prefered_mc = ["friendly", "sarcastic", "direct", "shy"],
+        preferedMc = ["friendly", "sarcastic", "direct", "shy"],
         images = {
-            "neutral": "Unknown Neutral",
-            "happy": "Unknown Happy",
-            "worried": "Unknown Worried"
+            "neutral": "Unknown neutral",
+            "happy": "Unknown happy",
+            "worried": "Unknown worried"
             }
         ) 
 
 # Jumps to Prologue.rpy Act0, transition to dialogue-focused files
 label start:
-    jump Act_0
+    jump Act0
 
 return

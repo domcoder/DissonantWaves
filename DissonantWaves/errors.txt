@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/10 Prologue.rpy", line 24: expected 'image_name_component' not found.
-    show (LukeChar.images("happy")) at halfright
-         ^
+File "game/10 Prologue.rpy", line 141: expected 'label_name' not found.
+    jump 
+        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Apr 25 15:17:13 2025
+Mon Apr 28 19:00:36 2025
