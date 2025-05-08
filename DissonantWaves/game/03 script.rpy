@@ -1,16 +1,16 @@
-# This first section will be used to define characters, images and sound variables.
-# It will also call upon the label required to jump to Act 1.
+## This first section will be used to define characters, images and sound variables.
+## It will also call upon the label required to jump to Act 1.
 
-# Initialising Ray
+## Initialising Ray
 init python:
-    # Temporary Ray
+    ## Temporary Ray
     TempRay = PlayerCharacter(Character("You"), name = "")
 
     def assignRay(customName):
         global Ray
         Ray = PlayerCharacter(Character(customName), customName)
 
-    # Home crew
+    ## Home crew
     Luke = Person(
         character = Character("Luke", image = "Luke"), 
         name = "Luke",
@@ -36,7 +36,7 @@ init python:
         )    
 
 
-    # Island cast
+    ## Island cast
     Jason = Person(
         character = Character("Jason", image = "Jason"), 
         name = "Jason",
@@ -268,7 +268,7 @@ init python:
         )   
 
 
-    # Supporting cast
+    ## Supporting cast
     Shane = Person(
         character = Character("Shane", image = "Shane"), 
         name = "Shane",
@@ -317,7 +317,7 @@ init python:
             }
         ) 
 
-# Jumps to Prologue.rpy Act0, transition to dialogue-focused files
+## Jumps to Prologue.rpy Act0, transition to dialogue-focused files
 label start:
     jump Act0
 

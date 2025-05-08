@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/03 script.rpy", line 10: invalid syntax
-        global Ray = PlayerCharacter(Character(customName), customName)
-                    ^
+File "game/10 Prologue.rpy", line 829: play requires a channel
+    play 
+         ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Apr 28 20:17:48 2025
+Thu May  8 16:24:43 2025

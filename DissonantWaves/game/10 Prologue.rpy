@@ -7,6 +7,8 @@ label Act0:
 
         "{i}Ding ding{/i}"
 
+        play music "audio/diner.ogg" volume 0.5 fadeout 1.0 fadein 1.0 loop
+
         show bg diner with dissolve
 
         "The familiar jingle of the diner door announces my presence. I scan the room until my eyes set on a certain duo at our usual corner window seat."
@@ -28,62 +30,43 @@ label Act0:
 
         menu:
             "Interrupt them":
-                jump Act0_Diner1_Choice1_Option1
+                TempRay.n "You two finished? Or should I wait until Luke's shitty idea runs its course?"
+                "Luke grins in my direction as May mouths out a ‘thank you' for the save. I can't leave these two alone for one second, I swear."
+                Luke.c happy "If it isn't the big bastard himself! What took you so long?"
+                TempRay.n "Packing, like you should've been doing."
+
             "Laugh along":
-                jump Act0_Diner1_Choice1_Option2
+                "I laugh at the two's antics, giving Luke a pat on the back. Luke's a good guy but I think he runs May's sanity down to its very last end.
+                It's a good thing she's used to it."
+                TempRay.n "Luke being Luke?"
+                May.c neutral "You have no idea. You finished packing yet?"
+                TempRay.n "Yeah, just got it done actually, why I was a little late, sorry about that."
+                Luke.c neutral "No problem dude. Glad you showed up though, Frank will be glad to see another friendly face before we're gone."
+                TempRay.n "We won't be gone long, I'm sure he'll cope. You packed yet?"
+
             "Sarcastically comment":
-                jump Act0_Diner1_Choice1_Option3
+                TempRay.n "This another one of Luke's bright ideas?"
+                "Luke snorts at the comment, though May vigorously nods her head, relieved to be brought out the conversation."
+                May.c "I doubt Luke will ever get to the stage of ‘budding entrepreneur' but if his business ideas are anything like his regular ideas, god help us all."
+                Luke.c "Yeah yeah, keep up your sarcastic wall. I know you think it's a good idea. Where were you anyway?"
+                TempRay.n "Practicing blood magic."
+                May.c neutral "Or packing."
+                "I point a finger towards May in affirmation. At least my snarky repertoire isn't lost on everyone."
+                May.c "Something you should have been doing too, Luke."
+
             "Let them continue":
-                jump Act0_Diner1_Choice1_Option4
+                "I let them continue, slipping into the booth and sitting opposite them. Seems they're still too engrossed in their conversation to notice me.
+                I'll be honest, sometimes it's hard to tell if their arguments are affectionate or if they actually do hate each other."
+                Luke.c "That cat has feelings too you know!"
+                May.c "All his feelings to you are anger. Much like mine actually."
+                Luke.c neutral "The kitten doesn't fall far from the litter. Mostly because they always land on their feet."
+                May.c "That doesn't work when you change apples for cats, Luke."
+                "May rolls her eyes, the exaggeration of the motion also clues her in on the fact I was sitting across from them. I give her a small shy smile
+                and she breaks out into a grin."
+                May.c neutral "You're finally here! You all done packing then?"
+                "I nod my head in confirmation. Luke gives a thumbs up at the news though that's not lost on May."
+                May.c "You should follow in their footsteps you know."
 
-    label Act0_Diner1_Choice1_Option1:
-        TempRay.n "You two finished? Or should I wait until Luke's shitty idea runs its course?"
-        "Luke grins in my direction as May mouths out a ‘thank you' for the save. I can't leave these two alone for one second, I swear."
-        Luke.c happy "If it isn't the big bastard himself! What took you so long?"
-        TempRay.n "Packing, like you should've been doing."
-
-        jump Act0_Diner2
-
-    label Act0_Diner1_Choice1_Option2:
-        "I laugh at the two's antics, giving Luke a pat on the back. Luke's a good guy but I think he runs May's sanity down to its very last end.
-        It's a good thing she's used to it."
-        TempRay.n "Luke being Luke?"
-        May.c neutral "You have no idea. You finished packing yet?"
-        TempRay.n "Yeah, just got it done actually, why I was a little late, sorry about that."
-        Luke.c neutral "No problem dude. Glad you showed up though, Frank will be glad to see another friendly face before we're gone."
-        TempRay.n "We won't be gone long, I'm sure he'll cope. You packed yet?"
-
-        jump Act0_Diner2
-
-    label Act0_Diner1_Choice1_Option3:
-        TempRay.n "This another one of Luke's bright ideas?"
-        "Luke snorts at the comment, though May vigorously nods her head, relieved to be brought out the conversation."
-        May.c "I doubt Luke will ever get to the stage of ‘budding entrepreneur' but if his business ideas are anything like his regular ideas, god help us all."
-        Luke.c "Yeah yeah, keep up your sarcastic wall. I know you think it's a good idea. Where were you anyway?"
-        TempRay.n "Practicing blood magic."
-        May.c neutral "Or packing."
-        "I point a finger towards May in affirmation. At least my snarky repertoire isn't lost on everyone."
-        May.c "Something you should have been doing too, Luke."
-
-        show Luke neutral
-        jump Act0_Diner2
-
-    label Act0_Diner1_Choice1_Option4:
-        "I let them continue, slipping into the booth and sitting opposite them. Seems they're still too engrossed in their conversation to notice me.
-        I'll be honest, sometimes it's hard to tell if their arguments are affectionate or if they actually do hate each other."
-        Luke.c "That cat has feelings too you know!"
-        May.c "All his feelings to you are anger. Much like mine actually."
-        Luke.c neutral "The kitten doesn't fall far from the litter. Mostly because they always land on their feet."
-        May.c "That doesn't work when you change apples for cats, Luke."
-        "May rolls her eyes, the exaggeration of the motion also clues her in on the fact I was sitting across from them. I give her a small shy smile
-        and she breaks out into a grin."
-        May.c neutral "You're finally here! You all done packing then?"
-        "I nod my head in confirmation. Luke gives a thumbs up at the news though that's not lost on May."
-        May.c "You should follow in their footsteps you know."
-
-        jump Act0_Diner2
-
-    label Act0_Diner2:
         "Luke waves his hand dismissively, laughing a little."
         Luke.c neutral "That's a tomorrow morning job."
         "May looks at me exasperatingly and all I can do is shrug in response. May's been trying to get Luke organised for our entire lives.
@@ -126,7 +109,7 @@ label Act0:
         "Claire smirks, jotting it down on her pad before turning to me."
         Claire.c "And your name, hun?"
 
-        # Custom name functionality for Ray
+        ## Custom name functionality for Ray
         label namingRay:
             $ clairePatience = 5
             $ playerName = renpy.input("What is your name?", "Ray", length = 15, exclude = " 0123456789+=,.?!<>").strip() or "Ray"
@@ -138,7 +121,7 @@ label Act0:
                 Claire.c "Is [playerName] right?"
                 menu:
                     "Yes":
-                        jump Act0_Diner3
+                        jump Act0_Diner2
                     "No":
                         $ clairePatience -= 1
                         if clairePatience == 1:
@@ -146,11 +129,11 @@ label Act0:
                             "Claire stares at me for a moment and then brightens up again."
                         elif clairePatience == 0:
                             $ playerName = "Ray"  
-                            jump Act0_Diner3
+                            jump Act0_Diner2
                         jump namingRay
-        jump Act0_Diner3
+        jump Act0_Diner2
 
-    label Act0_Diner3:
+    label Act0_Diner2:
         #$ Ray = PlayerCharacter(Character(playerName), playerName)
         $ assignRay(playerName)
 
@@ -226,7 +209,7 @@ label Act0:
         "We all nod and separate just in time for Claire to come back to our table to deliver our drinks."
 
         show May neutral at halfleft with move
-        show Claire happy at right with dissolve
+        show Claire happy at farright with dissolve
 
         Claire.c "Frank's still tied up in the kitchen but he wanted me to tell you guys that although you ‘troublesome trio' might be gone,
         you'll always have a home here at the diner."
@@ -243,135 +226,119 @@ label Act0:
 
         menu:
             "Of course":
-                jump Act0_Diner3_Choice1_Option1
+                Ray.c "Of course. What's there not to like? We've barely ever been out of Creekford and now we get an all expense covered trip to an island? I can't wait!"
+                Luke.c "What do you mean ‘barely ever been out of Creekford'? Remember that holiday I planned after sixth form? You guys said you loved it."
+                "May bristles and I can only give an uneasy smile in Luke's direction. He's opened the wrong can of worms."
+                May.c "You said we were going to Argentina."
+                "The response from our friend is through gritted teeth, the sheer malice behind the words causes Luke and I to shrivel up in fear."
+
+                show Luke happy
+
+                Luke.c "And we did."
+                "Although in a life-or-death scenario, Luke still tries to defend himself, though the conviction behind the words falls flat against May's ire."
+                Ray.c "No offence man, but I don't think you explained the trip properly."
+                Luke.c "What do you mean?"
+                "May's fist comes flying down against the table, the salt and pepper briefly being launched into the air from the force."
+                May.c "I packed an entire suitcase and came over to your house just to sit on your sofa and watch a 4-hour documentary!"
+                Luke.c "Oh. I was wondering why you were so dolled up just to see ‘Argentina: the home experience'. In my defence though, that documentary was very immersive."
+                May.c "I mean, it was. But that's not the point!"
+
+                $ Ray.friendly += 1
+
             "No. I hate the idea":
-                jump Act0_Diner3_Choice1_Option2
+                Ray.c "No. I hate the idea. Sand is coarse and rough and gets everywhere. And what else do I have to enjoy? People? A TV show? Sounds like a waste of our time."
+                "May rolls her eyes at my perfectly reasonable response."
+                May.c "Come on, [Ray.n]. It'll do you some good to get out the house and see the world. We've been trapped in Creekford for way too long."
+
+                show Luke happy
+
+                Luke.c "Trapped in Creekford? What about that holiday I planned after sixth form?"
+                Ray.c "That was shit and you know it."
+                "Luke lets out an over-dramatic gasp, as if I'd accused him of murder. May however nods her head in agreement with me, pointing an accusatory finger at Luke."
+                May.c "You said we were going to Argentina!"
+                Luke.c "And we did!"
+                "Luke still tries to defend himself, though the conviction behind the words falls flat against May and I's ire."
+                Ray.c "A 4-hour documentary {i}about{/i} Argentina is not the same as {i}going{/i} to Argentina."
+                "May's fist comes flying down against the table, the salt and pepper briefly being launched into the air from the force."
+                May.c "I packed a suitcase and everything!"
+                "She looks distraught as she reminds herself of the memory."
+                Luke.c "Oh. I was wondering why you were so dolled up just to see ‘Argentina: the home experience'. In my defence though, that documentary was very immersive."
+                May.c "I mean, it was. But that's not the point!"
+
+                $ Ray.direct += 1
+
             "No. I hate the idea (sarcastic)":
-                jump Act0_Diner3_Choice1_Option3
+                Ray.c "No. I hate the idea. Being excited for a free holiday? To a beautiful island? Perish the thought."
+                "May playfully rolls her eyes."
+                May.c "I guess I'll just uninvite you then. I'm sure there would be hundred of other people more than willing to take your place."
+                "Keeping in character I shared a mock look of horror with Luke."
+                Ray.c "You wouldn't dare!"
+                May.c "Oh, I would. Say goodbye to your one-way ticket to finally getting out the house."
+
+                show Luke happy
+
+                Luke.c "We get out the house all the time. What about that holiday I planned after sixth form."
+                "I snort at the memory as May gives out an exasperated sigh."
+                Ray.c "Oh yeah, the ‘Argentina' trip. What an enrichening experience."
+                Luke.c "You guys said you liked it."
+                Ray.c "I was being sarcastic."
+                Luke.c "It's very hard to tell over text you know. May enjoyed it, didn't you?"
+                "May bristles and I give Luke a smirk. Poor bastard is about to get the chewing out of a life time."
+                May.c "You said we were going to Argentina."
+                "The response from our friend is through gritted teeth, the sheer malice behind the words causes Luke to shrivel up in fear."
+                Luke.c "And we did."
+                "May's fist comes flying down against the table, the salt and pepper briefly being launched into the air from the force."
+                May.c "It was a 4-hour long documentary about going to Argentina!"
+                Ray.c "It was a 4-hour long documentary about going to Argentina."
+                May.c "I packed an entire suitcase!"
+                Ray.c "She packed an entire suitcase."
+                May.c "I spent a month learning Spanish!"
+                Ray.c "She spent a month learning Spanish."
+                May.c "[Ray.n], you're not helping."
+                Ray.c "I'm not helping."
+                "She looks distraught as she reminds herself of the memory."
+                Luke.c "Oh. I was wondering why you were so dolled up just to see ‘Argentina: the home experience'. In my defence though, that documentary was very immersive."
+                May.c "I mean, it was. But that's not the point!"
+
+                $ Ray.sarcastic += 1
+
             "Cautiously optimistic":
-                jump Act0_Diner3_Choice1_Option4
+                Ray.c "Uneasy, but cautiously optimistic."
+                "May gives an encouraging smile."
+                May.c "You'll be fine, [Ray.n]. Luke's got your back, haven't you Luke?"
 
-        label Act0_Diner3_Choice1_Option1:
-            Ray.c "Of course. What's there not to like? We've barely ever been out of Creekford and now we get an all expense covered trip to an island? I can't wait!"
-            Luke.c "What do you mean ‘barely ever been out of Creekford'? Remember that holiday I planned after sixth form? You guys said you loved it."
-            "May bristles and I can only give an uneasy smile in Luke's direction. He's opened the wrong can of worms."
-            May.c "You said we were going to Argentina."
-            "The response from our friend is through gritted teeth, the sheer malice behind the words causes Luke and I to shrivel up in fear."
+                show Luke happy
 
-            show Luke happy
+                "Luke gives a mock salute."
+                Luke.c "Yes, Ma'am. I shall protect the president with my life!"
+                Ray.c "We have prime minister, not a president…"
+                "Luke ignores my comment, instead opting to offer a reassuring pat on the shoulder."
+                Luke.c "It's not like we haven't been abroad before. Remember that holiday I planned after sixth form?"
+                "May bristles at the mention of the trip. Uh oh."
+                Ray.c "Maybe we shouldn't."
+                Luke.c "What? Why not? You guys said you liked it."
+                May.c "You said we were going to Argentina."
+                "The response from our friend is through gritted teeth, the sheer malice behind the words causes Luke and I to shrivel up in fear."
+                Luke.c "And we did."
+                "Although in a life-or-death scenario, Luke still tries to defend himself, though the conviction behind the words falls flat against May's ire."
+                May.c "It was a 4-hour long documentary about going to Argentina!"
+                "Luke shrivels but keeps resolve."
+                Luke.c "It was actually only 3 hours and 42 minutes."
+                May.c "I packed an entire suitcase!"
+                "Luke sinks lower."
+                Luke.c "You prepare too much anyway."
+                May.c "I spent a month learning Spanish!"
+                "Luke looks to me to provide any help though I vigorously shake my head no. He'd dug his own grave. I'll say something nice at his eulogy."
+                Luke.c "Spanish is a useful language to know even if you never actually go to Argentina."
+                "May stands from her seat to go and hit Luke though that only makes the small chuckle I was trying to stifle to finally be let loose.
+                May stops herself before making contact and regards me with a soft smile, dissipating the tension in the room. She sets herself back down."
+                Luke.c "In my defence, that documentary was very immersive."
+                "May sighs."
+                May.c "I mean, it was. But that's not the point."
 
-            Luke.c "And we did."
-            "Although in a life-or-death scenario, Luke still tries to defend himself, though the conviction behind the words falls flat against May's ire."
-            Ray.c "No offence man, but I don't think you explained the trip properly."
-            Luke.c "What do you mean?"
-            "May's fist comes flying down against the table, the salt and pepper briefly being launched into the air from the force."
-            May.c "I packed an entire suitcase and came over to your house just to sit on your sofa and watch a 4-hour documentary!"
-            Luke.c "Oh. I was wondering why you were so dolled up just to see ‘Argentina: the home experience'. In my defence though, that documentary was very immersive."
-            May.c "I mean, it was. But that's not the point!"
+                $ Ray.shy += 1
 
-            $ Ray.friendly += 1
-            jump Act0_Diner4
-
-        label Act0_Diner3_Choice1_Option2:
-            Ray.c "No. I hate the idea. Sand is coarse and rough and gets everywhere. And what else do I have to enjoy? People? A TV show? Sounds like a waste of our time."
-            "May rolls her eyes at my perfectly reasonable response."
-            May.c "Come on, [Ray.n]. It'll do you some good to get out the house and see the world. We've been trapped in Creekford for way too long."
-
-            show Luke happy
-
-            Luke.c "Trapped in Creekford? What about that holiday I planned after sixth form?"
-            Ray.c "That was shit and you know it."
-            "Luke lets out an over-dramatic gasp, as if I'd accused him of murder. May however nods her head in agreement with me, pointing an accusatory finger at Luke."
-            May.c "You said we were going to Argentina!"
-            Luke.c "And we did!"
-            "Luke still tries to defend himself, though the conviction behind the words falls flat against May and I's ire."
-            Ray.c "A 4-hour documentary {i}about{/i} Argentina is not the same as {i}going{/i} to Argentina."
-            "May's fist comes flying down against the table, the salt and pepper briefly being launched into the air from the force."
-            May.c "I packed a suitcase and everything!"
-            "She looks distraught as she reminds herself of the memory."
-            Luke.c "Oh. I was wondering why you were so dolled up just to see ‘Argentina: the home experience'. In my defence though, that documentary was very immersive."
-            May.c "I mean, it was. But that's not the point!"
-
-            $ Ray.direct += 1
-            jump Act0_Diner4
-
-        label Act0_Diner3_Choice1_Option3:
-            Ray.c "No. I hate the idea. Being excited for a free holiday? To a beautiful island? Perish the thought."
-            "May playfully rolls her eyes."
-            May.c "I guess I'll just uninvite you then. I'm sure there would be hundred of other people more than willing to take your place."
-            "Keeping in character I shared a mock look of horror with Luke."
-            Ray.c "You wouldn't dare!"
-            May.c "Oh, I would. Say goodbye to your one-way ticket to finally getting out the house."
-
-            show Luke happy
-
-            Luke.c "We get out the house all the time. What about that holiday I planned after sixth form."
-            "I snort at the memory as May gives out an exasperated sigh."
-            Ray.c "Oh yeah, the ‘Argentina' trip. What an enrichening experience."
-            Luke.c "You guys said you liked it."
-            Ray.c "I was being sarcastic."
-            Luke.c "It's very hard to tell over text you know. May enjoyed it, didn't you?"
-            "May bristles and I give Luke a smirk. Poor bastard is about to get the chewing out of a life time."
-            May.c "You said we were going to Argentina."
-            "The response from our friend is through gritted teeth, the sheer malice behind the words causes Luke to shrivel up in fear."
-            Luke.c "And we did."
-            "May's fist comes flying down against the table, the salt and pepper briefly being launched into the air from the force."
-            May.c "It was a 4-hour long documentary about going to Argentina!"
-            Ray.c "It was a 4-hour long documentary about going to Argentina."
-            May.c "I packed an entire suitcase!"
-            Ray.c "She packed an entire suitcase."
-            May.c "I spent a month learning Spanish!"
-            Ray.c "She spent a month learning Spanish."
-            May.c "[Ray.n], you're not helping."
-            Ray.c "I'm not helping."
-            "She looks distraught as she reminds herself of the memory."
-            Luke.c "Oh. I was wondering why you were so dolled up just to see ‘Argentina: the home experience'. In my defence though, that documentary was very immersive."
-            May.c "I mean, it was. But that's not the point!"
-
-            $ Ray.sarcastic += 1
-            jump Act0_Diner4
-
-        label Act0_Diner3_Choice1_Option4:
-            Ray.c "Uneasy, but cautiously optimistic."
-            "May gives an encouraging smile."
-            May.c "You'll be fine, [Ray.n]. Luke's got your back, haven't you Luke?"
-
-            show Luke happy
-
-            "Luke gives a mock salute."
-            Luke.c "Yes, Ma'am. I shall protect the president with my life!"
-            Ray.c "We have prime minister, not a president…"
-            "Luke ignores my comment, instead opting to offer a reassuring pat on the shoulder."
-            Luke.c "It's not like we haven't been abroad before. Remember that holiday I planned after sixth form?"
-            "May bristles at the mention of the trip. Uh oh."
-            Ray.c "Maybe we shouldn't."
-            Luke.c "What? Why not? You guys said you liked it."
-            May.c "You said we were going to Argentina."
-            "The response from our friend is through gritted teeth, the sheer malice behind the words causes Luke and I to shrivel up in fear."
-            Luke.c "And we did."
-            "Although in a life-or-death scenario, Luke still tries to defend himself, though the conviction behind the words falls flat against May's ire."
-            May.c "It was a 4-hour long documentary about going to Argentina!"
-            "Luke shrivels but keeps resolve."
-            Luke.c "It was actually only 3 hours and 42 minutes."
-            May.c "I packed an entire suitcase!"
-            "Luke sinks lower."
-            Luke.c "You prepare too much anyway."
-            May.c "I spent a month learning Spanish!"
-            "Luke looks to me to provide any help though I vigorously shake my head no. He'd dug his own grave. I'll say something nice at his eulogy."
-            Luke.c "Spanish is a useful language to know even if you never actually go to Argentina."
-            "May stands from her seat to go and hit Luke though that only makes the small chuckle I was trying to stifle to finally be let loose.
-            May stops herself before making contact and regards me with a soft smile, dissipating the tension in the room. She sets herself back down."
-            Luke.c "In my defence, that documentary was very immersive."
-            "May sighs."
-            May.c "I mean, it was. But that's not the point."
-
-            $ Ray.shy += 1
-            jump Act0_Diner4
-
-    label Act0_Diner4:
-        show Luke neutral
-
-        Luke.c "Whatever the point was, the only point that I want to continue pushing is how good this island trip is going to be!"
+        Luke.c neutral "Whatever the point was, the only point that I want to continue pushing is how good this island trip is going to be!"
         "Luke's somewhat forced segue was convincing enough for May to drop the topic and have the conversation continue."
         May.c "You have researched the island, right?"
         "Luke waves a hand dismissively once again."
@@ -379,106 +346,89 @@ label Act0:
 
         menu:
             "Agree":
-                jump Act0_Diner4_Choice1_Option1
+                $ Luke.affection += 1
+
+                Ray.c "Research-smesearch."
+
+                show Luke happy
+
+                "Luke grins and we high-five to May's disappointment."
+                May.c "I don't know why I even bother with you two."
+                Ray.c "You love us really."
+
+                show Luke neutral
+
+                Luke.c "No matter how deep down you bury it."
+
             "Disagree":
-                jump Act0_Diner4_Choice1_Option2
+                Ray.c "Actually…"
+                Luke.c "No, don't tell me you have turned to the prepared side!"
+                "Luke looks betrayed whilst May looks proud."
+                May.c "Ah yes, young padawan, finally you have harnessed your true potential to be prepared."
+                Luke.c "I have never felt such heartbreak until today."
 
-        label Act0_Diner4_Choice1_Option1:
-            $ Luke.affection += 1
+        "May ignores Luke, pulling out her laptop from her bag underneath the table. I smile slightly as I see the various badges and patches May has
+        decorated her trusty backpack with."
+        "Luke and I had been saved by that backpack more times than we could count, always having exactly what we
+        needed at any given time."
+        "Of course, what we needed was normally an extra pen for an exam or something but that didn't stop the legend of May's
+        backpack continuing to be a stalwart companion in our admittingly mundane life."
+        May.c "Here's a bit of background on the island."
+        "May gently pushes her drink to the side, careful not to spill any of it and opens up her laptop so Luke and I can see."
+        May.c "You will be going to the deserted Island of Manawa, just off of Auckland Island."
+        Ray.c "Near New Zealand, right?"
+        Luke.c "Whoa, do you think I should use my Auzzie accent?"
+        May.c "People from New Zealand have a different accent than those from Australia, Luke."
+        Luke.c "I'll just use a New Zealand accent then."
+        Ray.c "Will it be like your Scottish accent?"
 
-            Ray.c "Research-smesearch."
+        show Luke happy
 
-            show Luke happy
+        Luke.c "Yep."
+        Ray.c "Then no. Just no."
 
-            "Luke grins and we high-five to May's disappointment."
-            May.c "I don't know why I even bother with you two."
-            Ray.c "You love us really."
+        show Luke neutral
 
-            show Luke neutral
+        "Luke and I's repertoire is interrupted as May tries to get us back on track."
+        May.c "Right, other than accents, everything else about the island is pretty normal. The weather should be sunny most of the time, it shouldn't change at all.
+        The trees look creepy but that's about it."
+        May.c "You'll be on the island for about 15 days and will be given challenges every day for essentials like food."
+        May.c "After every challenge there will be a public vote on who they like the best.
+        That person will then get to request an item of their choice from home to be shipped to them on the island."
+        Ray.c "A popularity contest?"
+        Luke.c "We're great at those! There has never been a person who has not been swooned by our charm."
+        Ray.c "What about Mr Barnett?"
+        Luke.c "I said ‘person', [Ray.n], not monster. That guy wouldn't know love if it slapped him in the face. Which his ex-wives did, multiple times."
+        May.c "He liked me."
+        Luke.c "Yeah, well, everyone likes you. ‘Pride of Creekford this' ‘Pride of Creekford that', you could've accidentally strangled the pet chicken and
+        they still would've liked you."
+        Ray.c "Didn't you do that Luke?"
 
-            Luke.c "No matter how deep down you bury it."
+        show Luke worried
 
-            jump Act0_Diner5
+        Luke.c "By accident! He was so fluffy… Anyway, I got into shit because of that, but if Miss I-Could-Do-No-Wrong did it, I'm sure she would've gotten a medal."
+        May.c "The medals were just plastic Luke, they weren't anything to bring home."
 
-        label Act0_Diner4_Choice1_Option2:
-            Ray.c "Actually…"
-            Luke.c "No, don't tell me you have turned to the prepared side!"
-            "Luke looks betrayed whilst May looks proud."
-            May.c "Ah yes, young padawan, finally you have harnessed your true potential to be prepared."
-            Luke.c "I have never felt such heartbreak until today."
+        show Luke neutral
 
-            jump Act0_Diner5
-        
+        Luke.c "You only say that because you brought them all home."
+        May.c "[Ray.n] got a medal, once."
+        Luke.c "Yeah, because they partnered with you for the volcano project."
+        Ray.c "It was a good volcano."
+        May.c "Reminds me of the one in that Argentina documentary"
+        Luke.c "You were just going on about hating that documentary!"
+        "*Buzz* *buzz*"
 
-        label Act0_Diner5:
-            "May ignores Luke, pulling out her laptop from her bag underneath the table. I smile slightly as I see the various badges and patches May has
-            decorated her trusty backpack with."
-            "Luke and I had been saved by that backpack more times than we could count, always having exactly what we
-            needed at any given time."
-            "Of course, what we needed was normally an extra pen for an exam or something but that didn't stop the legend of May's
-            backpack continuing to be a stalwart companion in our admittingly mundane life."
-            May.c "Here's a bit of background on the island."
-            "May gently pushes her drink to the side, careful not to spill any of it and opens up her laptop so Luke and I can see."
-            May.c "You will be going to the deserted Island of Manawa, just off of Auckland Island."
-            Ray.c "Near New Zealand, right?"
-            Luke.c "Whoa, do you think I should use my Auzzie accent?"
-            May.c "People from New Zealand have a different accent than those from Australia, Luke."
-            Luke.c "I'll just use a New Zealand accent then."
-            Ray.c "Will it be like your Scottish accent?"
+        play music "audio/farewell.ogg" volume 0.5 fadeout 1.0 fadein 1.0 loop
 
-            show Luke happy
+        "May picks out her phone from her back pocket, grimacing slightly once she sees the notification."
+        May.c "Shit, it's Ma, she's saying I'm going to be late."
+        Luke.c "Oh, yeah, I forgot about that."
+        May.c "We'd probably be stuck here talking forever."
+        "There's a halfhearted attempt at a laugh from the group."
 
-            Luke.c "Yep."
-            Ray.c "Then no. Just no."
-
-            show Luke neutral
-
-            "Luke and I's repertoire is interrupted as May tries to get us back on track."
-            May.c "Right, other than accents, everything else about the island is pretty normal. The weather should be sunny most of the time, it shouldn't change at all.
-            The trees look creepy but that's about it."
-            May.c "You'll be on the island for about 15 days and will be given challenges every day for essentials like food."
-            May.c "After every challenge there will be a public vote on who they like the best.
-            That person will then get to request an item of their choice from home to be shipped to them on the island."
-            Ray.c "A popularity contest?"
-            Luke.c "We're great at those! There has never been a person who has not been swooned by our charm."
-            Ray.c "What about Mr Barnett?"
-            Luke.c "I said ‘person', [Ray.n], not monster. That guy wouldn't know love if it slapped him in the face. Which his ex-wives did, multiple times."
-            May.c "He liked me."
-            Luke.c "Yeah, well, everyone likes you. ‘Pride of Creekford this' ‘Pride of Creekford that', you could've accidentally strangled the pet chicken and
-            they still would've liked you."
-            Ray.c "Didn't you do that Luke?"
-
-            show Luke worried
-
-            Luke.c "By accident! He was so fluffy… Anyway, I got into shit because of that, but if Miss I-Could-Do-No-Wrong did it, I'm sure she would've gotten a medal."
-            May.c "The medals were just plastic Luke, they weren't anything to bring home."
-
-            show Luke neutral
-
-            Luke.c "You only say that because you brought them all home."
-            May.c "[Ray.n] got a medal, once."
-            Luke.c "Yeah, because he partnered with you about the volcano project."
-            Ray.c "It was a good volcano."
-            May.c "Reminds me of the one in that Argentina documentary"
-            Luke.c "You were just going on about hating that documentary!"
-            "*Buzz* *buzz*"
-            "May picks out her phone from her back pocket, grimacing slightly once she sees the notification."
-            May.c "Shit, it's Ma, she's saying I'm going to be late."
-            Luke.c "Oh, yeah, I forgot about that."
-            May.c "We'd probably be stuck here talking forever."
-            "There's a halfhearted attempt at a laugh from the group."
-
-            menu:
-                "Lighten the mood":
-                    jump Act0_Diner5_Choice1_Option1
-                "Insult Luke":
-                    jump Act0_Diner5_Choice1_Option2
-                "Make a joke":
-                    jump Act0_Diner5_Choice1_Option3
-                "Stay quiet":
-                    jump Act0_Diner5_Choice1_Option4
-
-            label Act0_Diner5_Choice1_Option1:
+        menu:
+            "Lighten the mood":
                 Ray.c "We can always come back here after May gets settled in. Creekford's not too far from London."
                 Luke.c "Yeah, you're right [Ray.n], I keep thinking this gonna be the last time we see you, May but you can come back whenever you want."
                 May.c "Of course. I already told you I wasn't leaving you guys behind. Think of it as another adventure for Maytopia to brag over
@@ -514,10 +464,8 @@ label Act0:
                 Luke.c "No, no I do not."
 
                 $ Ray.friendly += 1
-                jump Act0_Diner6
 
-
-            label Act0_Diner5_Choice1_Option2:
+            "Insult Luke":
                 Ray.c "That's only because Luke doesn't shut his goddamn mouth half the time. He'd talk a con artist into sleep."
                 Luke.c "Hurtful. I can't help but feel this unsolicited attack is because of the fact my Threshgar Riders recently came in the post
                 and you're scared I'll trounce you next time we fight."
@@ -551,10 +499,7 @@ label Act0:
 
                 $ Ray.direct += 1
 
-                jump Act0_Diner6
-
-
-            label Act0_Diner5_Choice1_Option3:
+            "Make a joke":
                 Ray.c "Forever? I couldn't stomach another second with either of you."
                 May.c "Hardy har, [Ray.n]. You're so funny."
                 Ray.c "I know, you don't have to be so upfront about it, May, my fans might be listening and get jealous."
@@ -594,9 +539,8 @@ label Act0:
                 Luke.c "No, no I do not."
 
                 $ Ray.sarcastic += 1
-                jump Act0_Diner6
 
-            label Act0_Diner5_Choice1_Option4:
+            "Stay quiet":
                 "There's a moment of contemplative silence."
                 Luke.c "Oh! I just remembered-"
                 "I really meant a moment."
@@ -637,210 +581,185 @@ label Act0:
                 Luke.c "No, no I do not."
 
                 $ Ray.shy += 1
-                jump Act0_Diner6
 
-            label Act0_Diner6:
-                "May stands, causing Luke and I to do the same. We managed to stall as much time as we could but the eventuality was always going to be there."
-                Luke.c "This is it."
-                May.c "Seems like it."
-                "May smiles despite it all, and her optimism is infectious."
-                May.c "I'll text you guys as soon as I arrive."
-                Ray.c "You better."
-                May.c "You guys better do the same too when you get to Manawa. And don't forget to bring your portable charger, you won't have any electricity over there. Got it?"
-                Luke.c "Yeah, yeah."
-                "Luke is dismissive but he definitely appreciates May's caring attitude."
-                May.c "Good, I'll be going then."
-                "May slides her laptop back into her bag and finishes off the rest of her drink before enveloping me in a goodbye hug."
-                May.c "I'm going to miss you, [Ray.n]."
-                Ray.c "I'm going to miss you, too."
-                May.c "You better call if something goes wrong, I don't want to be left out the loop."
-                Ray.c "Likewise."
-                May.c "And take care of Luke for me? You know how he is, so you'll have your work cut out for you without me around."
-                Ray.c "Don't worry, May. It'll be alright."
-                "‘It'll be alright' is such an empty phrase. Only meant to reassure both yourself and the person you're saying it to. We both have no idea if it's going to be alright. No idea at all."
-                "We separate, May then turning to Luke, opening up her arms as she slowly engulfs him in a hug of his own."
-                Luke.c "I don't want you to go."
-                May.c "I know. But I have to."
-                Luke.c "Yeah. Yeah, you do. So make us proud."
-                "They break from the hug and May starts her way over to the door, waving goodbye to Claire and Frank as she goes. Just before she leaves she turns back to us, beaming a patented May smile."
-                May.c "This is Otter Three to Stoat One and Ferret Two, do you receive me, over?"
-                Luke.c "This is Stoat One."
-                Ray.c "This is Ferret Two."
-                Luke.c "We receive you, over."
-                May.c "I am clear for takeoff. Before I sign off I'd like to make sure you two wouldn't have too much fun without out me."
-                Ray.c "Wouldn't dream of it, Otter Three."
-                May.c "Good. Until next time then. I love you guys, I care about you guys and I will always be there for you guys. This is Otter Three, signing off."
-                "May gives a final salute, which Luke and I return before leaving the diner."
+        "May stands, causing Luke and I to do the same. We managed to stall as much time as we could but the eventuality was always going to be there."
+        Luke.c "This is it."
+        May.c "Seems like it."
+        "May smiles despite it all, and her optimism is infectious."
+        May.c happy "I'll text you guys as soon as I arrive."
+        Ray.c "You better."
+        May.c "You guys better do the same too when you get to Manawa. And don't forget to bring your portable charger, you won't have any electricity over there. Got it?"
+        Luke.c "Yeah, yeah."
+        "Luke is dismissive but he definitely appreciates May's caring attitude."
+        May.c "Good, I'll be going then."
+        "May slides her laptop back into her bag and finishes off the rest of her drink before enveloping me in a goodbye hug."
+        May.c "I'm going to miss you, [Ray.n]."
+        Ray.c "I'm going to miss you, too."
+        May.c "You better call if something goes wrong, I don't want to be left out the loop."
+        Ray.c "Likewise."
+        May.c "And take care of Luke for me? You know how he is, so you'll have your work cut out for you without me around."
+        Ray.c "Don't worry, May. It'll be alright."
+        "‘It'll be alright' is such an empty phrase. Only meant to reassure both yourself and the person you're saying it to. We both have no idea if it's going to be alright. No idea at all."
+        "We separate, May then turning to Luke, opening up her arms as she slowly engulfs him in a hug of his own."
+        Luke.c "I don't want you to go."
+        May.c "I know. But I have to."
+        Luke.c "Yeah. Yeah, you do. So make us proud."
+        "They break from the hug and May starts her way over to the door, waving goodbye to Claire and Frank as she goes. Just before she leaves she turns back to us, beaming a patented May smile."
+        May.c "This is Otter Three to Stoat One and Ferret Two, do you receive me, over?"
+        Luke.c "This is Stoat One."
+        Ray.c "This is Ferret Two."
+        Luke.c "We receive you, over."
+        May.c "I am clear for takeoff. Before I sign off I'd like to make sure you two wouldn't have too much fun without out me."
+        Ray.c "Wouldn't dream of it, Otter Three."
+        May.c "Good. Until next time then. I love you guys, I care about you guys and I will always be there for you guys. This is Otter Three, signing off."
+        "May gives a final salute, which Luke and I return before leaving the diner."
 
-                scene bg diner with fade
+        scene bg diner with fade
 
-                "{i}*Ding Ding*"
+        "{i}*Ding Ding*"
 
-                show Luke worried at mid
-                jump Act0_Diner7
+        show Luke worried at mid
 
-            label Act0_Diner7:
-                #Prologue, Scene 2 - Diner
-                Luke.c "She's going to be alright, right?"
-                Ray.c "You sound like a broken record, mate. Of course, she'll be fine. It's us I'm worried about."
-                "Luke laughs, though it seems quite forced."
-                Luke.c "What are we gonna do now?"
-                Ray.c "What do you mean?"
-                Luke.c "May's off doing her own thing now, and we're still here in Creekford, like we always have.
-                Nothing's changed for us, [Ray.n]. We're still the same kids we were ten years ago."
-                Ray.c "Then what do you suppose we do?"
-                "My question is answered with silence. A silence we both knew too well. May was the one with the dream and the drive, we were just the cheerleaders. 
-                Now we have nothing to cheer for."
-                Ray.c "We can think of it when we get back from the island."
-                "Luke nods, trying to find any semblance of his usual cheery self."
+        #Prologue, Scene 2 - Diner
+        Luke.c "She's going to be alright, right?"
+        Ray.c "You sound like a broken record, mate. Of course, she'll be fine. It's us I'm worried about."
+        "Luke laughs, though it seems quite forced."
+        Luke.c "What are we gonna do now?"
+        Ray.c "What do you mean?"
+        Luke.c "May's off doing her own thing now, and we're still here in Creekford, like we always have.
+        Nothing's changed for us, [Ray.n]. We're still the same kids we were ten years ago."
+        Ray.c "Then what do you suppose we do?"
+        "My question is answered with silence. A silence we both knew too well. May was the one with the dream and the drive, we were just the cheerleaders. 
+        Now we have nothing to cheer for."
+        Ray.c "We can think of it when we get back from the island."
+        "Luke nods, trying to find any semblance of his usual cheery self."
+
+        show Luke neutral
+
+        Luke.c "You think we'll find some cool people on the island?"
+
+        menu:
+            "Be optimistic":
+                Ray.c "I think so. We'll have to work together anyway so I doubt anyone will be an arsehole. And as you've said, there hasn't been a single
+                person who hasn't succumbed to our charm."
+                Luke.c "You're right! Here's hoping they're hot, I'll need all the motivation I can get to get out of this depression."
+
+            "Be pessimistic":
+                Ray.c "I doubt it. There's billions of people out there but with our luck, the island will be full of arseholes."
+                Luke.c "Dude, you were supposed to cheer me up, not pile on my misery."
+                Ray.c "I'm telling you how it is."
+                Luke.c "Can you tell me how it isn't then?"
+                Ray.c "Fine, the island will be full of supermodels, just waiting for your affection."
+                Luke.c "Now that's more like it."
+
+        Ray.c "May's gone for one minute and you're already perving around."
+        show Luke happy
+        Luke.c "It's not perving, it's appreciating the human form, [Ray.n]. Don't act like you'd be disappointed if a bunch of supermodels rocked up on the island."
+        show Luke neutral
+        Ray.c "Depends on what kind."
+        Luke.c "Enlighten me then."
+        Ray.c "We really need to change your priorities."
+        Luke.c "Well I doubt anyone on that island is gonna play Warlocks of Sintaris, paint their models with us, join our ultimate frisbee team and like artsy movies."
+        Ray.c "You hate artsy movies."
+        Luke.c "May didn't."
+        Ray.c "Yeah well we're not replacing her, are we?"
+        Luke.c "I know. I just miss her already."
+
+        menu:
+            "Reassure him":
+                Ray.c "I know, I do too."
+                Luke.c "Sometimes I wish she didn't take that job at all."
+                Ray.c "You know it was what she wanted. It was what's best for her."
+
+                show Luke worried
+
+                Luke.c "That's what I keep telling myself. ‘It's what's best for her'. ‘This is what she wanted'. And I know it's selfish and dickish and shit
+                but what about what I want?"
+                Luke.c "What if all I wanted was to stay in Creekford with you and May forever? Why do we have to move on from being kids?
+                Why do we have to work our arses off just to leave our friends and family behind?"
+                Ray.c "Luke…"
+                Luke.c "I know. I know. Just, venting, you know?"
+                Ray.c "Hey, no matter what happens, I'm still here, man. Always will be."
 
                 show Luke neutral
 
-                Luke.c "You think we'll find some cool people on the island?"
+                Luke.c "I know, dude. That's why we're bezzie mates."
 
-                menu:
-                    "Be optimistic":
-                        jump Act0_Diner7_Choice1_Option1
-                    "Be pessimistic":
-                        jump Act0_Diner7_Choice1_Option2
+                $ Ray.friendly += 1
 
-                label Act0_Diner7_Choice1_Option1:
-                    Ray.c "I think so. We'll have to work together anyway so I doubt anyone will be an arsehole. And as you've said, there hasn't been a single
-                    person who hasn't succumbed to our charm."
-                    Luke.c "You're right! Here's hoping they're hot, I'll need all the motivation I can get to get out of this depression."
+            "Make fun of him":
+                Ray.c "She's been gone 5 minutes dude. Grow up."
 
-                label Act0_Diner7_Choice1_Option2:
-                    Ray.c "I doubt it. There's billions of people out there but with our luck, the island will be full of arseholes."
-                    Luke.c "Dude, you were supposed to cheer me up, not pile on my misery."
-                    Ray.c "I'm telling you how it is."
-                    Luke.c "Can you tell me how it isn't then?"
-                    Ray.c "Fine, the island will be full of supermodels, just waiting for your affection."
-                    Luke.c "Now that's more like it."
+                show Luke worried
 
-            label Act0_Diner8:
+                Luke.c "That's what I've been hearing over and over and over again. ‘Grow up, Luke'. ‘It's what she wanted, Luke'. ‘It's what's best for her, Luke'.
+                And I know it's selfish and I know it's dickish and shit but what about what I want?"
+                Luke.c "What if all I wanted was to stay in Creekford with you and May forever? Why do we have to move on from being kids? Why do we have to work our
+                arses off just to leave our friends and family behind?"
+                Ray.c "Luke you know damn well the answers. You need to stop this."
+                Luke.c "I know. I know. Just, venting, you know?"
+                Ray.c "Yeah, well, if you vent anymore I'll have to shut you up myself."
+                Luke.c "Miss her as much as I do?"
+                Ray.c "Course."
+
                 show Luke neutral
-                Ray.c "May's gone for one minute and you're already perving around."
-                show Luke happy
-                Luke.c "It's not perving, it's appreciating the human form, [Ray.n]. Don't act like you'd be disappointed if a bunch of supermodels rocked up on the island."
+
+                Luke.c "That's why we're bezzie mates."
+
+                $ Ray.direct += 1
+
+            "Make fun of him (sarcastically)":
+                Ray.c "Welp, she's out the door now. You'll have to propose some other time."
+
+                show Luke worried
+
+                Luke.c "You can't tell from my very disappointed face, but I'm laughing at your joke."
+                Ray.c "I'm sure you are. The problem is the fact your face instead portrays the feeling of a puppy being punted off a cliff Sparta style.
+                We just have to let May get on with what she's doing and deal with it."
+                Luke.c "That's what I've been hearing over and over and over again. ‘Deal with it, Luke'. ‘It's what she wanted, Luke'. ‘It's what's best for her, Luke'.
+                And I know it's selfish and I know it's dickish and shit but what about what I want?"
+                Luke.c "What if all I wanted was to stay in Creekford with you and May forever?
+                Why do we have to move on from being kids? Why do we have to work our arses off just to leave our friends and family behind?"
+                Ray.c "Because life, man. The big man upstairs is knocking on your door telling you to get outta bed and continue living. So you have to. May's answered the call, so we have to too."
+                Luke.c "Damn."
+                Ray.c "Pretty deep, eh?"
+                Luke.c "Pretty deep."
+                Ray.c "A shame it means literally nothing."
+
                 show Luke neutral
-                Ray.c "Depends on what kind."
-                Luke.c "Enlighten me then."
-                Ray.c "We really need to change your priorities."
-                Luke.c "Well I doubt anyone on that island is gonna play Wizards of Sintaris, paint their models with us, join our ultimate frisbee team and like artsy movies."
-                Ray.c "You hate artsy movies."
-                Luke.c "May didn't."
-                Ray.c "Yeah well we're not replacing her, are we?"
-                Luke.c "I know. I just miss her already."
 
-                menu:
-                    "Reassure him":
-                        jump Act0_Diner8_Choice1_Option1
-                    "Make fun of him":
-                        jump Act0_Diner8_Choice1_Option2
-                    "Make fun of him (sarcastically)":
-                        jump Act0_Diner8_Choice1_Option3
-                    "Comfort him":
-                        jump Act0_Diner8_Choice1_Option4
+                Luke.c "Yeah, but I appreciated it, that's why we're bezzie mates."
 
-                label Act0_Diner8_Choice1_Option1:
-                    Ray.c "I know, I do too."
-                    Luke.c "Sometimes I wish she didn't take that job at all."
-                    Ray.c "You know it was what she wanted. It was what's best for her."
+                $ Ray.sarcastic += 1
 
-                    show Luke worried
+            "Comfort him":
+                "I put my hand on his shoulder and try to muster up my most encouraging smile. I wish there was something I could say or something
+                I could do to put Luke at ease. Whatever I did, it seemed to help Luke enough."
 
-                    Luke.c "That's what I keep telling myself. ‘It's what's best for her'. ‘This is what she wanted'. And I know it's selfish and dickish and shit
-                    but what about what I want?"
-                    Luke.c "What if all I wanted was to stay in Creekford with you and May forever? Why do we have to move on from being kids?
-                    Why do we have to work our arses off just to leave our friends and family behind?"
-                    Ray.c "Luke…"
-                    Luke.c "I know. I know. Just, venting, you know?"
-                    Ray.c "Hey, no matter what happens, I'm still here, man. Always will be."
+                show Luke worried
 
-                    show Luke neutral
+                Luke.c "I've been hearing the same thing over and over again. ‘It's what's best for her'. ‘This is what she wanted'.
+                And I know it's selfish and dickish and shit but what about what I want?"
+                Luke.c "What if all I wanted was to stay in Creekford with you and May forever?
+                Why do we have to move on from being kids? Why do we have to work our arses off just to leave our friends and family behind?"
+                "I let the silence rest after Luke's outburst. Everything he had bottled up after the last few days surrounding
+                May's departure came ever flowing out in a cascade of anger. Once he calmed down I decided to speak up."
+                Ray.c "It's alright."
+                "The same words I'd used before. Just as empty as before. But sometimes you just need to say something, no matter how much truth it holds.
+                Luke nods absentmindedly."
+                "The silence gets heavier and heavier until it feels as though we needed May back for nothing
+                other than to help us hold up this quiet."
+                Luke.c "She's been gone five minutes and I already miss her so much."
+                Ray.c "I miss her too."
+                Luke.c "I know you do. It's probably just as hurtful to you as it is to me, sorry for bringing it up, man."
+                Ray.c "If it makes you feel better man, I'm here for it."
 
-                    Luke.c "I know, dude. That's why we're bezzie mates."
+                show Luke neutral
 
-                    $ Ray.friendly += 1
-                    jump Act0_Diner9
+                Luke.c "Thanks, that's why we're bezzie mates."
 
-                label Act0_Diner8_Choice1_Option2:
-                    Ray.c "She's been gone 5 minutes dude. Grow up."
+                $ Ray.shy += 1
 
-                    show Luke worried
-
-                    Luke.c "That's what I've been hearing over and over and over again. ‘Grow up, Luke'. ‘It's what she wanted, Luke'. ‘It's what's best for her, Luke'.
-                    And I know it's selfish and I know it's dickish and shit but what about what I want?"
-                    Luke.c "What if all I wanted was to stay in Creekford with you and May forever? Why do we have to move on from being kids? Why do we have to work our
-                    arses off just to leave our friends and family behind?"
-                    Ray.c "Luke you know damn well the answers. You need to stop this."
-                    Luke.c "I know. I know. Just, venting, you know?"
-                    Ray.c "Yeah, well, if you vent anymore I'll have to shut you up myself."
-                    Luke.c "Miss her as much as I do?"
-                    Ray.c "Course."
-
-                    show Luke neutral
-
-                    Luke.c "That's why we're bezzie mates."
-
-                    $ Ray.direct += 1
-                    jump Act0_Diner9
-
-                label Act0_Diner8_Choice1_Option3:
-                    Ray.c "Welp, she's out the door now. You'll have to propose some other time."
-
-                    show Luke worried
-
-                    Luke.c "You can't tell from my very disappointed face, but I'm laughing at your joke."
-                    Ray.c "I'm sure you are. The problem is the fact your face instead portrays the feeling of a puppy being punted off a cliff Sparta style.
-                    We just have to let May get on with what she's doing and deal with it."
-                    Luke.c "That's what I've been hearing over and over and over again. ‘Deal with it, Luke'. ‘It's what she wanted, Luke'. ‘It's what's best for her, Luke'.
-                    And I know it's selfish and I know it's dickish and shit but what about what I want?"
-                    Luke.c "What if all I wanted was to stay in Creekford with you and May forever?
-                    Why do we have to move on from being kids? Why do we have to work our arses off just to leave our friends and family behind?"
-                    Ray.c "Because life, man. The big man upstairs is knocking on your door telling you to get outta bed and continue living. So you have to. May's answered the call, so we have to too."
-                    Luke.c "Damn."
-                    Ray.c "Pretty deep, eh?"
-                    Luke.c "Pretty deep."
-                    Ray.c "A shame it means literally nothing."
-
-                    show Luke neutral
-
-                    Luke.c "Yeah, but I appreciated it, that's why we're bezzie mates."
-
-                    $ Ray.sarcastic += 1
-                    jump Act0_Diner9
-
-                label Act0_Diner8_Choice1_Option4:
-                    "I put my hand on his shoulder and try to muster up my most encouraging smile. I wish there was something I could say or something
-                    I could do to put Luke at ease. Whatever I did, it seemed to help Luke enough."
-
-                    show Luke worried
-
-                    Luke.c "I've been hearing the same thing over and over again. ‘It's what's best for her'. ‘This is what she wanted'.
-                    And I know it's selfish and dickish and shit but what about what I want?"
-                    Luke.c "What if all I wanted was to stay in Creekford with you and May forever?
-                    Why do we have to move on from being kids? Why do we have to work our arses off just to leave our friends and family behind?"
-                    "I let the silence rest after Luke's outburst. Everything he had bottled up after the last few days surrounding
-                    May's departure came ever flowing out in a cascade of anger. Once he calmed down I decided to speak up."
-                    Ray.c "It's alright."
-                    "The same words I'd used before. Just as empty as before. But sometimes you just need to say something, no matter how much truth it holds.
-                    Luke nods absentmindedly."
-                    "The silence gets heavier and heavier until it feels as though we needed May back for nothing
-                    other than to help us hold up this quiet."
-                    Luke.c "She's been gone five minutes and I already miss her so much."
-                    Ray.c "I miss her too."
-                    Luke.c "I know you do. It's probably just as hurtful to you as it is to me, sorry for bringing it up, man."
-                    Ray.c "If it makes you feel better man, I'm here for it."
-
-                    show Luke neutral
-
-                    Luke.c "Thanks, that's why we're bezzie mates."
-
-                    $ Ray.shy += 1
-                    jump Act0_Diner9
-                    
-    label Act0_Diner9:
         Ray.c "You know, you're the only one who says that."
         Luke.c "Says what?"
         Ray.c "‘Bezzie mates.'"
@@ -907,6 +826,7 @@ label Act0:
         #Over the top, the chosen characters will appear and present their videos.
 
         scene bg plane
+        play music "audio/routine.ogg" volume 0.5 fadeout 1.0 fadein 1.0 loop
 
         "{i}Whir whir."
         pause(2)
@@ -949,7 +869,6 @@ label Act0:
                 enough to be selected so I can make the most of it."
 
                 $ Intro_Vid_Feelings = 1
-                jump Act0_Plane2
 
             "Annoying":
                 "Annoying. I had never done anything like this before and honestly, I am already half prepared to quit."
@@ -957,7 +876,6 @@ label Act0:
                 Whatever. I'm mainly doing this for May but we'll see what happens."
 
                 $ Intro_Vid_Feelings = 2
-                jump Act0_Plane2
 
             "Funny":
                 "Funny. I had never done anything like this before and honestly, I think it'll be hilarious how it all turns out."
@@ -966,7 +884,6 @@ label Act0:
                 Anything could happen."
 
                 $ Intro_Vid_Feelings = 3
-                jump Act0_Plane2
 
             "Terrifying":
                 "Terrifying. I had never done anything like this before and honestly, I am dreading every second. What if I mess up?"
@@ -974,9 +891,7 @@ label Act0:
                 don't think I'll ever be comfortable being so vulnerable to so many people like this. Still, we'll see what happens."
 
                 $ Intro_Vid_Feelings = 4
-                jump Act0_Plane2
 
-    label Act0_Plane2:
         """Whatever I feel, or whatever I think it doesn't actually matter because there is literally nothing I can do to prepare myself.
 
         Which is the most frustrating thing, I'm caught in a limbo of running myself round in circles trying to wrap my head around my
@@ -1006,7 +921,7 @@ label Act0:
                 I'm coming to the island cause I want to. That's it."
                 "The video cuts off just as abruptly as it starts. From the way he spoke, it was like Jason was being sent to prison.
                 Not exactly a people person, but you never know, maybe he fits the whole hard exterior but sweet interior trope."
-                "I heard Wizards of Sintaris is getting a video game adaptation so maybe we'll have something to talk about."
+                "I heard Warlocks of Sintaris is getting a video game adaptation so maybe we'll have something to talk about."
 
                 $ Watch_Intro_Vid = True
                 jump Intro_Vid_1
@@ -1075,7 +990,7 @@ label Act0:
                 $ Watch_Intro_Vid = True
                 jump Intro_Vid_1
 
-            "Next":
+            "-Next-":
                 jump Intro_Vid_2
             "Stop":
                 jump Act0_Plane3
@@ -1167,7 +1082,7 @@ label Act0:
                 $ Watch_Intro_Vid = True
                 jump Intro_Vid_2
 
-            "Next":
+            "-Next-":
                 jump Intro_Vid_3
             "Stop":
                 jump Act0_Plane3
@@ -1234,7 +1149,7 @@ label Act0:
                 $ Watch_Intro_Vid = True
                 jump Intro_Vid_3
 
-            "Next":
+            "-Next-":
                 jump Intro_Vid_4
             "Stop":
                 jump Act0_Plane3
@@ -1324,7 +1239,7 @@ label Act0:
                 $ Watch_Intro_Vid = True
                 jump Intro_Vid_4
 
-            "Next":
+            "-Next-":
                 jump Intro_Vid_1
             "Stop":
                 jump Act0_Plane3
@@ -1371,10 +1286,8 @@ label Act0:
         The weather looks good and we are expecting to land approximately fifteen minutes ahead of schedule."
         "{i}The weather in Auckland is clear and sunny, with a high of 25 degrees for this afternoon. If the weather continues to cooperate you should
         get a great view of the city as we descend. We thank you for flying with us and hope you've enjoyed the ride."
-
-        jump Act0_Ship1
-
-    label Act0_Ship1:
+        
+        ## Ship scene
         scene bg ship
 
         "Almost as soon as we landed Luke and I were getting ushered various ways, having catch up to a suited man who’s walking speed gave track stars a run for their money. 
@@ -1547,8 +1460,6 @@ label Act0:
         Luke.c "Sure, we just wanted to ask a few more questions if that’s alright."
         Shane.c "Sure, kid. I’ve got 5, shoot."
 
-        jump Act0_Ship2
-
     label Act0_Ship2:
         menu:
             "Island":
@@ -1665,370 +1576,378 @@ label Act0:
                 Ray.c "Because of the lack of candidates."
                 Luke.c "Ah, victory by default, my favourite way to win."
 
-    "When we stepped back out onto the deck we finally got to see the sheer number of contestants we’d have to get to know over the next week or so.
-    I catch Uncle Joe’s eye as he’s mid conversation and he gives his little eyebrow wiggle and gestures slightly with his head to the crowd."
-    Luke.c "Dude…"
-    "I look back at Luke to see him basically drooling over one of the contestants."
-    Luke.c "That’s Camilla. She’s, like, the coolest person alive."
-    "The aforementioned Camilla notices us staring and shoots us a lazy smirk and a wink. Luke practically melts at the attention."
-    Luke.c "Dude, dude, dude! Was that at me? Was it at you? She definitely winked, right? That wasn’t just my imagination?"
-    Ray.c "I have no idea, man."
-    Luke.c "Well it was definitely at us. It is here that I instate the Bezzie Mate code."
-    Ray.c "The Bezzie Mate code?"
-    Luke.c "The Bezzie Mate code. Specifically under paragraph 12, sentence 3, stanza 7, chorus 4, enactment 10, which states as follows:"
-    Luke.c "‘The Bezzie Mate of whom first laid eyes upon the suitable suitor for thy future linage shalt be granted first attempt at courtship.
-    If thy first Bezzie Mate were to fail in their task, then the second Bezzie Mate shalt be granted permission to enact.’"
-    Ray.c "Knock yourself out, mate. I’ll see about chatting with some of the others."
-    Luke.c "Really? Yes! Don’t you worry, mate, I’ll work the ol’ Luke-charm and once we’re getting it on as if Marvin Gaye was singing directly
-    to us, we’ll slide on into your conversation and help you out."
-    Ray.c "And in the small chance-"
-    Luke.c "Very small chance."
-    Ray.c "In the very small chance it doesn’t work out?"
-    Luke.c "Then I’d have warmed her up so much for you that touching her would give you third degree burns."
+        "When we stepped back out onto the deck we finally got to see the sheer number of contestants we’d have to get to know over the next week or so.
+        I catch Uncle Joe’s eye as he’s mid conversation and he gives his little eyebrow wiggle and gestures slightly with his head to the crowd."
+        Luke.c "Dude…"
+        "I look back at Luke to see him basically drooling over one of the contestants."
+        Luke.c "That’s Camilla. She’s, like, the coolest person alive."
+        "The aforementioned Camilla notices us staring and shoots us a lazy smirk and a wink. Luke practically melts at the attention."
+        Luke.c "Dude, dude, dude! Was that at me? Was it at you? She definitely winked, right? That wasn’t just my imagination?"
+        Ray.c "I have no idea, man."
+        Luke.c "Well it was definitely at us. It is here that I instate the Bezzie Mate code."
+        Ray.c "The Bezzie Mate code?"
+        Luke.c "The Bezzie Mate code. Specifically under paragraph 12, sentence 3, stanza 7, chorus 4, enactment 10, which states as follows:"
+        Luke.c "‘The Bezzie Mate of whom first laid eyes upon the suitable suitor for thy future linage shalt be granted first attempt at courtship.
+        If thy first Bezzie Mate were to fail in their task, then the second Bezzie Mate shalt be granted permission to enact.’"
+        Ray.c "Knock yourself out, mate. I’ll see about chatting with some of the others."
+        Luke.c "Really? Yes! Don’t you worry, mate, I’ll work the ol’ Luke-charm and once we’re getting it on as if Marvin Gaye was singing directly
+        to us, we’ll slide on into your conversation and help you out."
+        Ray.c "And in the small chance-"
+        Luke.c "Very small chance."
+        Ray.c "In the very small chance it doesn’t work out?"
+        Luke.c "Then I’d have warmed her up so much for you that touching her would give you third degree burns."
 
-    hide Luke
+        hide Luke
 
-    "Luke saunters up to Camilla who if anything just looks amused. She gives me a brief look, one that I give an apologetic smile to,
-    before changing my attention to the rest of the crowd."
-    Luke.c "Hey! Do you come here often?"
-    "With that conversation going great I decided to chat with…"
+        "Luke saunters up to Camilla who if anything just looks amused. She gives me a brief look, one that I give an apologetic smile to,
+        before changing my attention to the rest of the crowd."
+        Luke.c "Hey! Do you come here often?"
+        "With that conversation going great I decided to chat with…"
 
-    $ Ship_Jason_Willow = 0
-    menu:
-        "Jason and Willow":
-            $ Jason.affection += 1
-            $ Willow.affection += 1
-            show Willow neutral at halfleft
+        $ Ship_Jason_Willow = 0
+        menu:
+            "Jason and Willow":
+                $ Jason.affection += 1
+                $ Willow.affection += 1
+                show Willow neutral at halfleft
 
-            Willow.c "Watch out, new arrival incoming."
+                Willow.c "Watch out, new arrival incoming."
 
-            show Jason neutral at halfright
+                show Jason neutral at halfright
 
-            Jason.c "Why…"
+                Jason.c "Why…"
 
-            menu:
-                "Friendly":
-                    Ray.c "Hi there. Nice to meet you."
-                    Willow.c "Right back at you, fellow friend. I know Jason here is just dying to meet new people."
+                menu:
+                    "Friendly":
+                        Ray.c "Hi there. Nice to meet you."
+                        Willow.c "Right back at you, fellow friend. I know Jason here is just dying to meet new people."
 
-                    $ Ship_Jason_Willow = 1
+                        $ Ship_Jason_Willow = 1
 
-                "Sarcastic":
-                    $ Willow.affection += 1
+                    "Sarcastic":
+                        $ Willow.affection += 1
 
-                    Ray.c "What a lovely way to enter a conversation. ‘Why’?"
-                    Jason.c "Fuck’s sake, another smartarse."
-                    Willow.c "Oh no, we’re multiplying. If anyone else comes along you won’t be able to count that high."
+                        Ray.c "What a lovely way to enter a conversation. ‘Why’?"
+                        Jason.c "Fuck’s sake, another smartarse."
+                        Willow.c "Oh no, we’re multiplying. If anyone else comes along you won’t be able to count that high."
 
-                    $ Ship_Jason_Willow = 2
+                        $ Ship_Jason_Willow = 2
 
-                "Direct":
-                    $ Jason.affection += -1
+                    "Direct":
+                        $ Jason.affection += -1
 
-                    Ray.c "You got a problem with me?"
-                    Jason.c "Maybe I do. What are you gonna do about it."
-                    Willow.c "He’ll probably just out-brood you. Actually, I don’t think that’s possible."
+                        Ray.c "You got a problem with me?"
+                        Jason.c "Maybe I do. What are you gonna do about it."
+                        Willow.c "He’ll probably just out-brood you. Actually, I don’t think that’s possible."
 
-                    $ Ship_Jason_Willow = 3
+                        $ Ship_Jason_Willow = 3
 
-                "Shy":
-                    $ Jason.affection += 1
+                    "Shy":
+                        $ Jason.affection += 1
 
-                    "I silently step over to them but don’t make an attempt to interrupt their conversation."
-                    Willow.c "Either you’re mute or you prefer to silently judge people. I’d usually do that from afar."
-                    Jason.c "I already prefer them over you. Talk less."
-                    Willow.c "Oh no, Jason doesn’t like me. I’m practically crying."
+                        "I silently step over to them but don’t make an attempt to interrupt their conversation."
+                        Willow.c "Either you’re mute or you prefer to silently judge people. I’d usually do that from afar."
+                        Jason.c "I already prefer them over you. Talk less."
+                        Willow.c "Oh no, Jason doesn’t like me. I’m practically crying."
 
-                    $ Ship_Jason_Willow = 4
+                        $ Ship_Jason_Willow = 4
 
-            Jason.c "Bite me, Willow."
-            Willow.c "I wouldn’t want to. Your stereotypical persona will cut my tongue, edgelord."
-            Jason.c "*growls*"
-            Ray.c "Do you guys know each other?"
-            Jason.c "No, quite the opposite. I wanted to stand here, alone, for the rest of the trip. She came over and started annoying me."
-            Willow.c "I was going to do the same but then I saw Jason’s sad little puppy dog face and I couldn’t help coming over."
-            Jason.c "Say that again and I’ll kill you."
-            Willow.c "I’m already dead inside, try it."
-            "Jason growls again and Willow smirks. After a moment of staring at each other, Jason huffs and looks away.
-            Willow addresses me with smugness, like she’d won that particular bout."
-            Willow.c "I can see why it feels like we know each other, Jason’s taking my snark quite well.I’m surprised he hasn’t turned around and walked away yet."
-            Jason.c "I’m definitely thinking about it. Then I’d leave you alone though, and god knows you wouldn’t make any friends."
-            Willow.c "Would you look at that, he can take it and throw it back. I was about to feel bad but now I know we can have a bit of back and forth."
-            "Willow looks at me, and her expression drops. Her smirk turns into a tight frown as she looks at me with scrutiny."
-            Willow.c "The jury’s still out on you."
+                Jason.c "Bite me, Willow."
+                Willow.c "I wouldn’t want to. Your stereotypical persona will cut my tongue, edgelord."
+                Jason.c "*growls*"
+                Ray.c "Do you guys know each other?"
+                Jason.c "No, quite the opposite. I wanted to stand here, alone, for the rest of the trip. She came over and started annoying me."
+                Willow.c "I was going to do the same but then I saw Jason’s sad little puppy dog face and I couldn’t help coming over."
+                Jason.c "Say that again and I’ll kill you."
+                Willow.c "I’m already dead inside, try it."
+                "Jason growls again and Willow smirks. After a moment of staring at each other, Jason huffs and looks away.
+                Willow addresses me with smugness, like she’d won that particular bout."
+                Willow.c "I can see why it feels like we know each other, Jason’s taking my snark quite well.I’m surprised he hasn’t turned around and walked away yet."
+                Jason.c "I’m definitely thinking about it. Then I’d leave you alone though, and god knows you wouldn’t make any friends."
+                Willow.c "Would you look at that, he can take it and throw it back. I was about to feel bad but now I know we can have a bit of back and forth."
+                "Willow looks at me, and her expression drops. Her smirk turns into a tight frown as she looks at me with scrutiny."
+                Willow.c "The jury’s still out on you."
 
-            if Ship_Jason_Willow == 1:
-                Ray.c "Take all the time you need. I can wait for the verdict."
-                Willow.c "You know it’s really hard to act decidedly pissed off for no reason when you keep being nice and friendly. Ruins our vibe, you know? 
-                We’re supposed to brood in the corner."
-                Ray.c "Guess I didn’t get the memo."
-                Jason.c "That’s a good thing."
-                Willow.c "Yeah I guess you’re right. Batman over here has enough angst for the three of us."
-                Jason.c "Wouldn’t that make you my Robin?"
-                Willow.c "I think the new guy seems more fit for the job. Speaking of which, we never actually did the whole introduction thing, did we? I’m Willow."
+                if Ship_Jason_Willow == 1:
+                    Ray.c "Take all the time you need. I can wait for the verdict."
+                    Willow.c "You know it’s really hard to act decidedly pissed off for no reason when you keep being nice and friendly. Ruins our vibe, you know? 
+                    We’re supposed to brood in the corner."
+                    Ray.c "Guess I didn’t get the memo."
+                    Jason.c "That’s a good thing."
+                    Willow.c "Yeah I guess you’re right. Batman over here has enough angst for the three of us."
+                    Jason.c "Wouldn’t that make you my Robin?"
+                    Willow.c "I think the new guy seems more fit for the job. Speaking of which, we never actually did the whole introduction thing, did we? I’m Willow."
 
-            elif Ship_Jason_Willow == 2:
-                Ray.c "I’m waiting with baited breath. For how could I ever live with myself if I didn’t get validation from you."
-                Willow.c "Hmm, the sarcasm was good, I’d say it was delivered too dramatically though. B+."
-                Jason.c "You’re grading them? On whose authority?"
-                Willow.c "Just stand over there and sulk, okay? You’ll pop a blood vessel being that curious."
-                Jason.c "Uhuh. You ever stop being such a mega-bitch?"
-                Willow.c "No. It’s one of my core character traits spawned from my mountainous amount of personal issues. I think it’s hereditary."
-                Ray.c "I think I have that trait too."
-                Willow.c "Guess it’s only passed amongst the elite. Me and, oh, we haven’t actually done that whole introduction thing, have we? I’m WIllow."
+                elif Ship_Jason_Willow == 2:
+                    Ray.c "I’m waiting with baited breath. For how could I ever live with myself if I didn’t get validation from you."
+                    Willow.c "Hmm, the sarcasm was good, I’d say it was delivered too dramatically though. B+."
+                    Jason.c "You’re grading them? On whose authority?"
+                    Willow.c "Just stand over there and sulk, okay? You’ll pop a blood vessel being that curious."
+                    Jason.c "Uhuh. You ever stop being such a mega-bitch?"
+                    Willow.c "No. It’s one of my core character traits spawned from my mountainous amount of personal issues. I think it’s hereditary."
+                    Ray.c "I think I have that trait too."
+                    Willow.c "Guess it’s only passed amongst the elite. Me and, oh, we haven’t actually done that whole introduction thing, have we? I’m WIllow."
 
-            elif Ship_Jason_Willow == 3:
-                Ray.c "Well it’s a good thing I don’t give a shit what the jury thinks."
-                Jason.c "Why the fuck are you still here?"
-                Willow.c "Calm, Jason. They clearly don’t care much for witticism, nor can their tiny brain comprehend that our insults aren’t barbed at one another. They remind me a lot of you."
-                Jason.c "That’s not a good thing."
-                Willow.c "Eh, swings and roundabouts. They certainly don’t play along as well as you do."
-                Ray.c "That’s just because your games are bad."
-                Willow.c "You’re the one who came over to us. This is how we are. You know what? Let’s just pretend this last bit didn’t happen, I don’t need Jason punching someone on the first day. We haven’t even done the whole introduction thing, have we? I’m WIllow."
+                elif Ship_Jason_Willow == 3:
+                    Ray.c "Well it’s a good thing I don’t give a shit what the jury thinks."
+                    Jason.c "Why the fuck are you still here?"
+                    Willow.c "Calm, Jason. They clearly don’t care much for witticism, nor can their tiny brain comprehend that our insults aren’t barbed at one another. They remind me a lot of you."
+                    Jason.c "That’s not a good thing."
+                    Willow.c "Eh, swings and roundabouts. They certainly don’t play along as well as you do."
+                    Ray.c "That’s just because your games are bad."
+                    Willow.c "You’re the one who came over to us. This is how we are. You know what? Let’s just pretend this last bit didn’t happen, I don’t need Jason punching someone on the first day. We haven’t even done the whole introduction thing, have we? I’m WIllow."
 
-            elif Ship_Jason_Willow == 4:
-                "I let the silence hang for a second, not feeling inclined to comment on what Willow said."
-                Jason.c "Well? Has ‘the jury’ come up with something?"
-                Willow.c "Not yet, though they do appreciate the quiet time to think."
-                Jason.c "I don’t think enough people appreciate that."
-                Willow.c "Oh? I couldn’t fathom who you’re referring to."
-                Jason.c "I can think of one. She definitely talks too much."
-                Willow.c "You should take it as a complement, you’re easy to talk to. Both of you are. I doubt I’d talk nearly as much to other people.
-                Maybe they just provide the other half of a conversation. Whereas you two just… stare."
-                Jason.c "It’s because we couldn’t care less about what you are saying."
-                Willow.c "Hey, at least I’m trying the whole social interaction thing. Speaking of, we haven’t actually introduced ourselves properly yet, have we? I’m Willow."
+                elif Ship_Jason_Willow == 4:
+                    "I let the silence hang for a second, not feeling inclined to comment on what Willow said."
+                    Jason.c "Well? Has ‘the jury’ come up with something?"
+                    Willow.c "Not yet, though they do appreciate the quiet time to think."
+                    Jason.c "I don’t think enough people appreciate that."
+                    Willow.c "Oh? I couldn’t fathom who you’re referring to."
+                    Jason.c "I can think of one. She definitely talks too much."
+                    Willow.c "You should take it as a complement, you’re easy to talk to. Both of you are. I doubt I’d talk nearly as much to other people.
+                    Maybe they just provide the other half of a conversation. Whereas you two just… stare."
+                    Jason.c "It’s because we couldn’t care less about what you are saying."
+                    Willow.c "Hey, at least I’m trying the whole social interaction thing. Speaking of, we haven’t actually introduced ourselves properly yet, have we? I’m Willow."
 
-            Jason.c "I’m Jason."
-            Ray.c "I’m [Ray.n]."
-            Willow.c "Great, now that that’s sorted, I think I’ll be heading inside to read, I’ve had enough social interaction for one day.
-            We should do this again, maybe. I don’t like talking to anyone else and for what it’s worth, this wasn’t too bad."
-            Jason.c "Speak for yourself."
-            Willow.c "Now I know we have to do this again, if anything just so I can see you grimace again."
-            Jason.c "I’m constantly grimacing. That’s my thing."
-            Willow.c "True, and you’re great at it. Later [Ray.n], Jason."
-            Jason.c "I’m uh, not going to move from here, it’s furthest away from everyone and people should leave me alone now,
-            so not to be rude and all but could you, you know. Go away?"
+                Jason.c "I’m Jason."
+                Ray.c "I’m [Ray.n]."
+                Willow.c "Great, now that that’s sorted, I think I’ll be heading inside to read, I’ve had enough social interaction for one day.
+                We should do this again, maybe. I don’t like talking to anyone else and for what it’s worth, this wasn’t too bad."
+                Jason.c "Speak for yourself."
+                Willow.c "Now I know we have to do this again, if anything just so I can see you grimace again."
+                Jason.c "I’m constantly grimacing. That’s my thing."
+                Willow.c "True, and you’re great at it. Later [Ray.n], Jason."
+                Jason.c "I’m uh, not going to move from here, it’s furthest away from everyone and people should leave me alone now,
+                so not to be rude and all but could you, you know. Go away?"
 
-            hide Jason
-            hide Willow
+                hide Jason
+                hide Willow
 
-        "Arthur and Senna":
-            $ Arthur.affection += 1
-            $ Senna.affection += 1
+            "Arthur and Senna":
+                $ Arthur.affection += 1
+                $ Senna.affection += 1
 
-            "There is silence as I approach the group, the only way I can tell they’ve actually recognised my presence is when the guy in the suit nods in my direction. 
-            I go to introduce myself but he puts up a hand to stop me."
-            Arthur.c "If you could give it a moment, I’ve asked Senna here something."
-            "I turn to the blue-haired girl to see her staring rather blankly in my direction."
+                "There is silence as I approach the group, the only way I can tell they’ve actually recognised my presence is when the guy in the suit nods in my direction. 
+                I go to introduce myself but he puts up a hand to stop me."
+                Arthur.c "If you could give it a moment, I’ve asked Senna here something."
+                "I turn to the blue-haired girl to see her staring rather blankly in my direction."
 
-            menu:
-                "Friendly":
-                    $ Arthur.affection += 1
+                menu:
+                    "Friendly":
+                        $ Arthur.affection += 1
 
-                    Ray.c "Oh, sorry."
-                    Arthur.c "No problem."
-                    Senna.c "Good experience."
-                    Arthur.c "Ah, of course. From what I can tell. You’ve probably not gone out too much, after all you’re still young and all that, 
-                    so this does seem like a worthwhile endeavor."
-                    "The man regards Senna with a gentle smile before turning to me and sticking out a hand."
-                    Arthur.c "I’m Arthur, it’s nice to meet you."
-                    "I shake Arthur’s hand and offer a handshake towards Senna."
-                    Ray.c "It’s nice to meet you too."
-                    Arthur.c "I’m afraid she doesn’t really do handshakes."
-                    "Just as he says this, Senna, almost in rebellion, takes my hand in a surprisingly strong grip and nods her head my way."
-                    Arthur.c "Huh. Are you an approachable person, [Ray.n]?"
-                    Ray.c "Not as much as the next person."
-                    Arthur.c "I think you’re selling yourself a bit short there. Especially with how Senna’s just reacted."
-                    Ray.c "Is she not like this very often?"
+                        Ray.c "Oh, sorry."
+                        Arthur.c "No problem."
+                        Senna.c "Good experience."
+                        Arthur.c "Ah, of course. From what I can tell. You’ve probably not gone out too much, after all you’re still young and all that, 
+                        so this does seem like a worthwhile endeavor."
+                        "The man regards Senna with a gentle smile before turning to me and sticking out a hand."
+                        Arthur.c "I’m Arthur, it’s nice to meet you."
+                        "I shake Arthur’s hand and offer a handshake towards Senna."
+                        Ray.c "It’s nice to meet you too."
+                        Arthur.c "I’m afraid she doesn’t really do handshakes."
+                        "Just as he says this, Senna, almost in rebellion, takes my hand in a surprisingly strong grip and nods her head my way."
+                        Arthur.c "Huh. Are you an approachable person, [Ray.n]?"
+                        Ray.c "Not as much as the next person."
+                        Arthur.c "I think you’re selling yourself a bit short there. Especially with how Senna’s just reacted."
+                        Ray.c "Is she not like this very often?"
 
-                "Sarcastic":
-                    $ Arthur.affection -= 1
-                    Ray.c "So do we wait for, like, a signal? Does her hair turn blue when she’s thinking and when she’s come up with an answer it turns yellow or something?"
-                    Arthur.c "Not quite. Possibly if you keep quiet we may find out."
-                    "Senna continues to stare, a bit like a robot who’s system’s been fried."
-                    Ray.c "I’ll be honest, I think Senna needs some oil rather than time. Seems like her gears are a bit clogged. I’m [Ray.n] by the way."
-                    Arthur.c "Arthur."
-                    "Though the response is terse, Arthur still brings out his hand for me to shake. After the pleasantries of social interaction are over Arthur 
-                    goes to properly introduce Senna."
-                    Arthur.c "This is-"
-                    Senna.c "Good experience."
-                    "There’s a brief beat of confused silence though it gives me enough of a period to capitalise on some good comedic timing."
-                    Ray.c "Well hello, Good Experience, it’s very nice to meet you. I must say it is a quite peculiar
-                    name, French, perhaps?"
-                    Arthur.c "She was answering my question on why she wanted to come to the island, [Ray.n]. Though if you must, I’d say it sounds more Greek."
-                    Ray.c "What do you think, Senna?"
-                    Arthur.c "You may have to wait a bit there, sometimes it takes her some time to-"
-                    Senna.c "Spiritual."
-                    Arthur.c "Huh."
-                    Ray.c "That’s not exactly a language, good try though."
-                    Arthur.c "I wouldn’t have thought so but you seem to be able to get Senna out of her shell better than I can."
-                    Ray.c "Is she not like this very often?"
+                    "Sarcastic":
+                        $ Arthur.affection -= 1
+                        Ray.c "So do we wait for, like, a signal? Does her hair turn blue when she’s thinking and when she’s come up with an answer it turns yellow or something?"
+                        Arthur.c "Not quite. Possibly if you keep quiet we may find out."
+                        "Senna continues to stare, a bit like a robot who’s system’s been fried."
+                        Ray.c "I’ll be honest, I think Senna needs some oil rather than time. Seems like her gears are a bit clogged. I’m [Ray.n] by the way."
+                        Arthur.c "Arthur."
+                        "Though the response is terse, Arthur still brings out his hand for me to shake. After the pleasantries of social interaction are over Arthur 
+                        goes to properly introduce Senna."
+                        Arthur.c "This is-"
+                        Senna.c "Good experience."
+                        "There’s a brief beat of confused silence though it gives me enough of a period to capitalise on some good comedic timing."
+                        Ray.c "Well hello, Good Experience, it’s very nice to meet you. I must say it is a quite peculiar
+                        name, French, perhaps?"
+                        Arthur.c "She was answering my question on why she wanted to come to the island, [Ray.n]. Though if you must, I’d say it sounds more Greek."
+                        Ray.c "What do you think, Senna?"
+                        Arthur.c "You may have to wait a bit there, sometimes it takes her some time to-"
+                        Senna.c "Spiritual."
+                        Arthur.c "Huh."
+                        Ray.c "That’s not exactly a language, good try though."
+                        Arthur.c "I wouldn’t have thought so but you seem to be able to get Senna out of her shell better than I can."
+                        Ray.c "Is she not like this very often?"
 
-                "Direct":
-                    Ray.c "Well what the hell is she waiting for? Answer the question."
-                    Arthur.c "Give her some time."
-                    Senna.c "Good experience."
-                    Ray.c "The hell does that mean?"
-                    Arthur.c "I asked her why she wanted to go to the island. Judging by how she’s carried herself, I’d highly doubt she’s very well travelled, so the 
-                    show had extra appeal. Is that the same for you?"
-                    Ray.c "Does it matter?"
-                    Arthur.c "Of course it matters. Finding that one thing doesn’t matter, very easily allows you to think another thing doesn’t matter which 
-                    eventually boils down to nothing mattering. Which is rather the wrong mindset to have, is it not?"
-                    Ray.c "Sweeping statement, much?"
-                    Arthur.c "Of course. How else do you get your point across without extended hyperbole anymore?"
-                    Ray.c "I don’t like how all your sentences end with me being asked a question."
-                    Arthur.c "Why not?"
-                    Senna.c "You did it again."
-                    Ray.c "Even the mute’s on my side."
-                    Arthur.c "I must admit it is surprising seeing her so acutely engaged in what you’re saying."
-                    Ray.c "You telling me she doesn’t usually pay attention to conversation?"
+                    "Direct":
+                        Ray.c "Well what the hell is she waiting for? Answer the question."
+                        Arthur.c "Give her some time."
+                        Senna.c "Good experience."
+                        Ray.c "The hell does that mean?"
+                        Arthur.c "I asked her why she wanted to go to the island. Judging by how she’s carried herself, I’d highly doubt she’s very well travelled, so the 
+                        show had extra appeal. Is that the same for you?"
+                        Ray.c "Does it matter?"
+                        Arthur.c "Of course it matters. Finding that one thing doesn’t matter, very easily allows you to think another thing doesn’t matter which 
+                        eventually boils down to nothing mattering. Which is rather the wrong mindset to have, is it not?"
+                        Ray.c "Sweeping statement, much?"
+                        Arthur.c "Of course. How else do you get your point across without extended hyperbole anymore?"
+                        Ray.c "I don’t like how all your sentences end with me being asked a question."
+                        Arthur.c "Why not?"
+                        Senna.c "You did it again."
+                        Ray.c "Even the mute’s on my side."
+                        Arthur.c "I must admit it is surprising seeing her so acutely engaged in what you’re saying."
+                        Ray.c "You telling me she doesn’t usually pay attention to conversation?"
 
-                "Shy":
-                    "Senna refuses to break eye contact with me, no matter where I look she continues to stare with
-                    looks that could kill, which I would assume would only mean she could then stare through my
-                    soul as well."
-                    Senna.c "Good experience."
-                    "I turn to the man, hoping to get any kind of context to the situation or confirmation that saying
-                    ‘good experience’ to a complete stranger is perfectly acceptable social communication
-                    nowadays."
-                    Arthur.c "Ah, I see."
-                    "Arthur nods his head sagely before turning to me."
-                    Arthur.c "Senna here was answering my question on why she wanted to come to the island.
-                    Judging by how she’s carried herself, I’d highly doubt she’s very well travelled, so the show had
-                    extra appeal. Oh, I’m Arthur by the way."
-                    "I tentatively shake his hand, he smiles kindly."
-                    Arthur.c "Sorry, didn’t mean to interrupt you earlier, Senna here sometimes takes a while to
-                    process things."
-                    Ray.c "Is that right?"
-                    Senna.c "Sometimes."
-                    Arthur.c "Huh."
-                    Ray.c "Something wrong?"
-                    Arthur.c "Senna answered almost instantly to you. I’d originally say it’s because you are good with
-                    people, though from what I’ve observed you’d rather keep to yourself."
-                    Ray.c "You’re not wrong. So is Senna usually like this?"
+                    "Shy":
+                        "Senna refuses to break eye contact with me, no matter where I look she continues to stare with
+                        looks that could kill, which I would assume would only mean she could then stare through my
+                        soul as well."
+                        Senna.c "Good experience."
+                        "I turn to the man, hoping to get any kind of context to the situation or confirmation that saying
+                        ‘good experience’ to a complete stranger is perfectly acceptable social communication
+                        nowadays."
+                        Arthur.c "Ah, I see."
+                        "Arthur nods his head sagely before turning to me."
+                        Arthur.c "Senna here was answering my question on why she wanted to come to the island.
+                        Judging by how she’s carried herself, I’d highly doubt she’s very well travelled, so the show had
+                        extra appeal. Oh, I’m Arthur by the way."
+                        "I tentatively shake his hand, he smiles kindly."
+                        Arthur.c "Sorry, didn’t mean to interrupt you earlier, Senna here sometimes takes a while to
+                        process things."
+                        Ray.c "Is that right?"
+                        Senna.c "Sometimes."
+                        Arthur.c "Huh."
+                        Ray.c "Something wrong?"
+                        Arthur.c "Senna answered almost instantly to you. I’d originally say it’s because you are good with
+                        people, though from what I’ve observed you’d rather keep to yourself."
+                        Ray.c "You’re not wrong. So is Senna usually like this?"
 
-            Arthur.c "I wouldn’t know, though I didn’t assume so and I’m quite good at reading people. At least
-            I hope so, it is the foundation of my doctorate."
-            Ray.c "Doctorate?"
-            Arthur.c "Ah yes, Psychology. Take that how you will."
-            Ray.c "How am I supposed to take it?"
-            Arthur.c "Sometimes because it isn’t one of the harder sciencies, psychology tends to not be
-            taken as seriously."
-            Ray.c "So you’re psychoanylsing me right now?"
-            Arthur.c "Perhaps."
-            "Arthur smiles."
-            Arthur.c "Though if I were to be psychoanalysing anyone, it would be Senna here. I get the
-            impression she is rather misunderstood."
-            "Senna has decided to tune out of our conversation, looking off the boat and into the horizon,
-            wind whipping around some of her short blue hair though it never seems to get in her way."
+                Arthur.c "I wouldn’t know, though I didn’t assume so and I’m quite good at reading people. At least
+                I hope so, it is the foundation of my doctorate."
+                Ray.c "Doctorate?"
+                Arthur.c "Ah yes, Psychology. Take that how you will."
+                Ray.c "How am I supposed to take it?"
+                Arthur.c "Sometimes because it isn’t one of the harder sciencies, psychology tends to not be
+                taken as seriously."
+                Ray.c "So you’re psychoanylsing me right now?"
+                Arthur.c "Perhaps."
+                "Arthur smiles."
+                Arthur.c "Though if I were to be psychoanalysing anyone, it would be Senna here. I get the
+                impression she is rather misunderstood."
+                "Senna has decided to tune out of our conversation, looking off the boat and into the horizon,
+                wind whipping around some of her short blue hair though it never seems to get in her way."
 
-            menu:
-                "Friendly":
-                    Ray.c "Misunderstood? How so?"
-                    Arthur.c "Normality breeds a status quo which when challenged leads to ostracisation."
-                    Ray.c "Um, could I get that in English?"
-                    Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
-                    acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
-                    Ray.c "Well hopefully this show can show off how likeable she can be."
-                    Arthur.c "One can only hope. It feels like she’s been alone for far too long."
-                    Ray.c "Just a feeling? I thought you were supposed to work off of facts or something. Is
-                    psychoanalysing mostly your own judgement?"
-                    Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
-                    my line of work. Everything I say about what I think of other people is just an opinion, nothing
-                    more."
-                    Ray.c "No offence, but doesn’t kind of, I don’t know-"
-                    Senna.c "Undermine."
-                    Ray.c "Yeah, actually. Doesn’t it undermine your doctorate if it’s just built upon opinion?"
+                menu:
+                    "Friendly":
+                        Ray.c "Misunderstood? How so?"
+                        Arthur.c "Normality breeds a status quo which when challenged leads to ostracisation."
+                        Ray.c "Um, could I get that in English?"
+                        Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
+                        acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
+                        Ray.c "Well hopefully this show can show off how likeable she can be."
+                        Arthur.c "One can only hope. It feels like she’s been alone for far too long."
+                        Ray.c "Just a feeling? I thought you were supposed to work off of facts or something. Is
+                        psychoanalysing mostly your own judgement?"
+                        Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
+                        my line of work. Everything I say about what I think of other people is just an opinion, nothing
+                        more."
+                        Ray.c "No offence, but doesn’t kind of, I don’t know-"
+                        Senna.c "Undermine."
+                        Ray.c "Yeah, actually. Doesn’t it undermine your doctorate if it’s just built upon opinion?"
+                    
+                    "Sarcastic":
+                        Ray.c "Is this the part where she flings her hand to her forehead and then monologues about the
+                        tragedies of her life?"
+                        Arthur.c "That would be quite the sight, but no, misunderstood in a non-shakespearean
+                        monologue way."
+                        Ray.c "Pray tell the words you speak in greater detail young squire."
+                        Arthur.c "Normality breeds a status quo which when challenged leads to ostracisation."
+                        Ray.c "Okay, neither me nor my ye olde English self have any idea what you just said."
+                        Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
+                        acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
+                        Ray.c "Ah yes, because so many of us are ‘normal’."
+                        Arthur.c "I wish everyone shared your view, [Ray.n], but I feel like she’s been alone for far too long."
+                        Ray.c "Just a feeling, doc? I thought you guys were supposed to work off of facts?"
+                        Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
+                        my line of work. Everything I say about what I think of other people is just an opinion, nothing
+                        more."
+                        Ray.c "Heh, must be fun having your entire doctorate based on opinion, you an art major too?"
+                        Senna.c "Creative writing."
+                        Ray.c "Or creative writing. Drama maybe? Your entire career is based on what someone else
+                        thinks."
+                    
+                    "Direct":
+                        Ray.c "Everyone’s misunderstood or whatever. Doesn’t make a difference."
+                        Arthur.c "Then Senna is even more misunderstood than how most people are misunderstood.
+                        Normality breeds a status quo which when challenged leads to ostracisation."
+                        Ray.c "That meant absolutely fucking nothing to me."
+                        Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
+                        acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
+                        Ray.c "You can’t exactly say she isn’t weird though. Nothing wrong with that but she is weird."
+                        "Senna absentmindingly nods her head, proving my point."
+                        Ray.c "See, even she agrees."
+                        Arthur.c "You may have nothing wrong with it but for some reason quite a lot of people do. I feel
+                        she’s been alone for far too long."
+                        Ray.c "Just a feeling? That the whole basis for your doctorate or whatever, a feeling?"
+                        Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
+                        my line of work. Everything I say about what I think of other people is just an opinion, nothing
+                        more."
+                        Ray.c "So your career is worthless."
+                        Senna.c "No."
+                        Ray.c "Okay, fine, maybe not worthless but it’s just made up of opinion?"
+
+                    "Shy":
+                        Ray.c "Misunderstood?"
+                        Arthur.c "Normality breeds a status quo which when challenged leads to ostracisation."
+                        "I briefly look over to Senna to see if she got what any of what Arthur just said but her dead-
+                        panned expression is even harder to understand."
+                        Ray.c "Uhh…"
+                        Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
+                        acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
+                        Ray.c "That’s… not a nice feeling."
+                        Arthur.c "No. No it’s not. I feel she’s been alone for far too long."
+                        Ray.c "Just feel? Aren’t you supposed to just, like, know?"
+                        Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
+                        my line of work. Everything I say about what I think of other people is just an opinion, nothing
+                        more."
+                        Ray.c "Doesn’t it feel kind of-"
+                        Senna.c "Empty."
+                        Ray.c "Yeah. Empty. Doesn’t it feel empty knowing your career is just based on opinion?"
                 
-                "Sarcastic":
-                    Ray.c "Is this the part where she flings her hand to her forehead and then monologues about the
-                    tragedies of her life?"
-                    Arthur.c "That would be quite the sight, but no, misunderstood in a non-shakespearean
-                    monologue way."
-                    Ray.c "Pray tell the words you speak in greater detail young squire."
-                    Arthur.c "Normality breeds a status quo which when challenged leads to ostracisation."
-                    Ray.c "Okay, neither me nor my ye olde English self have any idea what you just said."
-                    Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
-                    acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
-                    Ray.c "Ah yes, because so many of us are ‘normal’."
-                    Arthur.c "I wish everyone shared your view, [Ray.n], but I feel like she’s been alone for far too long."
-                    Ray.c "Just a feeling, doc? I thought you guys were supposed to work off of facts?"
-                    Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
-                    my line of work. Everything I say about what I think of other people is just an opinion, nothing
-                    more."
-                    Ray.c "Heh, must be fun having your entire doctorate based on opinion, you an art major too?"
-                    Senna.c "Creative writing."
-                    Ray.c "Or creative writing. Drama maybe? Your entire career is based on what someone else
-                    thinks."
-                
-                "Direct":
-                    Ray.c "Everyone’s misunderstood or whatever. Doesn’t make a difference."
-                    Arthur.c "Then Senna is even more misunderstood than how most people are misunderstood.
-                    Normality breeds a status quo which when challenged leads to ostracisation."
-                    Ray.c "That meant absolutely fucking nothing to me."
-                    Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
-                    acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
-                    Ray.c "You can’t exactly say she isn’t weird though. Nothing wrong with that but she is weird."
-                    "Senna absentmindingly nods her head, proving my point."
-                    Ray.c "See, even she agrees."
-                    Arthur.c "You may have nothing wrong with it but for some reason quite a lot of people do. I feel
-                    she’s been alone for far too long."
-                    Ray.c "Just a feeling? That the whole basis for your doctorate or whatever, a feeling?"
-                    Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
-                    my line of work. Everything I say about what I think of other people is just an opinion, nothing
-                    more."
-                    Ray.c "So your career is worthless."
-                    Senna.c "No."
-                    Ray.c "Okay, fine, maybe not worthless but it’s just made up of opinion?"
+                Arthur.c "So many things are, nowadays."
+                Ray.c "I feel like I’ve had an existential crisis."
+                "Arthur laughs softly, gently pushing his glasses back up the bridge of his nose. Senna, on the
+                other hand, doesn’t even crack a smirk."
+                Arthur.c "My bad. I’ll try to tone it back down to something more casual like the weather or
+                something next time."
+                Senna.c "Don’t."
+                Ray.c "I’ve got to agree with Senna actually, this is much better."
+                Arthur.c "Then I suppose I’ll keep it up. Until then though, I’ve got some more people I’d quite like
+                to talk to before we arrive at the island. If you’ll excuse me."
+                "Arthur leaves Senna and I to our own devices. Senna looks up at me, the same dead eyed
+                stare as before."
+                Senna.c "...Sad."
+                Ray.c "Huh?"
+                Senna.c "You are sad."
+                "I smirk. Either Senna has learnt too much from Arthur already, or I’m even easier to read than I
+                thought."
+                Ray.c "Yeah, yeah I am."
+                Senna.c "I am sad for you."
+                Ray.c "Hey, you don’t have to do that. Thanks though."
+                "The classic Senna stare for another few seconds. I must say it’s getting less and less unsettling
+                the more I’m subjected to it."
+                Senna.c "It is a shame."
+                "And then she walks off. To what or to where I have no idea. Guess the conversation is over?"
 
-                "Shy":
-                    Ray.c "Misunderstood?"
-                    Arthur.c "Normality breeds a status quo which when challenged leads to ostracisation."
-                    "I briefly look over to Senna to see if she got what any of what Arthur just said but her dead-
-                    panned expression is even harder to understand."
-                    Ray.c "Uhh…"
-                    Arthur.c "Right, sorry. Sometimes I feel the need to overcomplicate my language. In short, Senna
-                    acts rather strangely compared to how ‘normal’ people act so is considered ‘weird’."
-                    Ray.c "That’s… not a nice feeling."
-                    Arthur.c "No. No it’s not. I feel she’s been alone for far too long."
-                    Ray.c "Just feel? Aren’t you supposed to just, like, know?"
-                    Arthur.c "A lot of it is unfortunately just your own judgement. Not much is considered concrete in
-                    my line of work. Everything I say about what I think of other people is just an opinion, nothing
-                    more."
-                    Ray.c "Doesn’t it feel kind of-"
-                    Senna.c "Empty."
-                    Ray.c "Yeah. Empty. Doesn’t it feel empty knowing your career is just based on opinion?"
-            
-            Arthur.c "So many things are, nowadays."
-            Ray.c "I feel like I’ve had an existential crisis."
-            "Arthur laughs softly, gently pushing his glasses back up the bridge of his nose. Senna, on the
-            other hand, doesn’t even crack a smirk."
-            Arthur.c "My bad. I’ll try to tone it back down to something more casual like the weather or
-            something next time."
-            Senna.c "Don’t."
-            Ray.c "I’ve got to agree with Senna actually, this is much better."
-            Arthur.c "Then I suppose I’ll keep it up. Until then though, I’ve got some more people I’d quite like
-            to talk to before we arrive at the island. If you’ll excuse me."
-            "Arthur leaves Senna and I to our own devices. Senna looks up at me, the same dead eyed
-            stare as before."
-            Senna.c "...Sad."
-            Ray.c "Huh?"
-            Senna.c "You are sad."
-            "I smirk. Either Senna has learnt too much from Arthur already, or I’m even easier to read than I
-            thought."
-            Ray.c "Yeah, yeah I am."
-            Senna.c "I am sad for you."
-            Ray.c "Hey, you don’t have to do that. Thanks though."
-            "The classic Senna stare for another few seconds. I must say it’s getting less and less unsettling
-            the more I’m subjected to it."
-            Senna.c "It is a shame."
-            "And then she walks off. To what or to where I have no idea. Guess the conversation is over?"
+            "Addison, Emma and Juliette":
+                pass
 
+            "Cain, Riley and Charlotte":
+                pass
 
-        #"Addison, Emma and Juliette":
-        #"Cain, Riley and Charlotte":
-        #"Aaron and Star":
-        #"Nick and Elliot":
-        #"Alek and Uncle Joe":
+            "Aaron and Star":
+                pass
+
+            "Nick and Elliot":
+                pass
+
+            "Alek and Uncle Joe":
+                pass
 
 return

@@ -1,12 +1,12 @@
-# Audio and visual resources pre-loaded for everything else
+## Audio and visual resources pre-loaded for everything else
 
-# Banned names text file
+## Banned names text file
 init python:
-    with renpy.file("bannedNames.txt") as bannedNames:
+    with renpy.file("resources/bannedNames.txt") as bannedNames:
             bannedContent = bannedNames.read().decode("utf-8") 
     bannedContent = [bannedName.strip().lower() for bannedName in bannedContent.split(",") if bannedName.strip()]
 
-# Background images
+## Background images
 image black:
     "#000000"
 image bg hut:
@@ -18,12 +18,12 @@ image bg plane:
 image bg ship:
     "bg_ship"
 
-# Characters
+## Characters
 
-# Main characters: angry, annoyed, concerned/worried, determined/serious, flirting, happy, neutral, sad, surprised, cry, excited, laugh, nervous, blush, and sleeping
-# Side characters: neutral, negative (could be thoughtful, annoyed, puzzled, worried, etc depending on personality), positive (happy, laughing, joking, smirking, flirting, etc)
+## Main characters: angry, annoyed, concerned/worried, determined/serious, flirting, happy, neutral, sad, surprised, cry, excited, laugh, nervous, blush, and sleeping
+## Side characters: neutral, negative (could be thoughtful, annoyed, puzzled, worried, etc depending on personality), positive (happy, laughing, joking, smirking, flirting, etc)
 
-# Home Cast Images
+## Home Cast Images
 image Luke neutral:
     "Luke_neutral.png"
 image Luke happy:
@@ -42,7 +42,7 @@ image May sad:
 image May worried:
     "May_worried.png"
 
-# Main Cast Images
+## Main Cast Images
 image Joe neutral:
     "Joe_neutral.png"
 
@@ -53,7 +53,7 @@ image Willow neutral:
     "Willow_neutral.png"
 
 
-# Side Cast Images
+## Side Cast Images
 image Claire happy:
     "Claire_happy.png"
 image Claire worried:
