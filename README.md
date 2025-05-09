@@ -1,6 +1,14 @@
 # MaybeManawa?!
 
 ## Digital Interactive Fiction
-Currently prototyping systems such as an object-oriented approach to characters (and in future, locations), a mobile phone and GUI modifications.
+A visual novel game currently in-development.
 
-The current prototype is a 5 minute demonstration of the core gameplay and dialogue showcase using temporary assets. Presently there is no distribution version available.
+Predicted core features include:
+  - In-game phone
+  - Four minigame types
+  - Several unique endings
+  - Replay value
+  - Dedicated friendship system
+  - Four personality stats
+
+The story takes the player through an adventure as they are stranded on a deserted island. Unfortunately, people start being killed off and it's up to the protagonist to make the most of a bad situation.
