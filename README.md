@@ -1,5 +1,5 @@
 # MaybeManawa?!
-Being picked off one-by-one, the reality TV show contestants of Maybe Manawa?! must fight to survive until the production company shuts the show down or the killer is unveiled. Will Ray still forge bonds with the other captives on the isle or will they all lose themselves to fear and chaos as the world watches on?
+Being picked off one-by-one, the reality TV show contestants of **Maybe Manawa?!** must fight to survive until the production company shuts the show down or the killer is unveiled. Will Ray still forge bonds with the other captives on the isle or will they all lose themselves to fear and chaos as the world watches on?
 
 Game pitch with short video demo:
 
@@ -17,4 +17,4 @@ Core features  include:
   - Four personality stats
   - Future entries planned
 
-Ray & his best friend, Luke, have been invited to partake in a brand new reality TV game show named “Maybe Manawa!?” where a group of contestants must spend thirteen days on Manawa island. Terror suddenly runs rampant throughout the contestants as murders begin occurring - the production company having certainly never mentioned anything of the sort and yet the show goes on. Lead Ray through the thirteen days, befriending other contestants and fighting to survive. Along the way, will Ray make new friends, find romance or uncover something deeper?
+Ray & his best friend, Luke, have been invited to partake in a brand new reality TV game show named “**Maybe Manawa!?**” where a group of contestants must spend thirteen days on Manawa island. Terror suddenly runs rampant throughout the contestants as murders begin occurring - the production company having certainly never mentioned anything of the sort and yet the show goes on. Lead Ray through the thirteen days, befriending other contestants and fighting to survive. Along the way, will Ray make new friends, find romance or uncover something deeper?
