@@ -1,4 +1,5 @@
 # MaybeManawa?!
+Being picked off one-by-one, the reality TV show contestants of Maybe Manawa?! must fight to survive until the production company shuts the show down or the killer is unveiled. Will Ray still forge bonds with the other captives on the isle or will they all lose themselves to fear and chaos as the world watches on?
 
 Game pitch with short video demo:
 
