@@ -1,6 +1,6 @@
 # MaybeManawa?!
 
-Game pitch with short video demo
+Game pitch with short video demo:
 
 https://docs.google.com/presentation/d/1ai1F6oZj6M_hcZqkwjN2vAtl4-bPb8GTm3HlAivZGQ0/edit?usp=sharing
 
