@@ -7,12 +7,13 @@ https://docs.google.com/presentation/d/1ai1F6oZj6M_hcZqkwjN2vAtl4-bPb8GTm3HlAivZ
 ## Digital Interactive Fiction
 A visual novel game currently in-development.
 
-Predicted core features include:
+Core features  include:
   - In-game phone
   - Four minigame types
-  - Several unique endings
-  - Replay value
+  - Seven unique endings
+  - A strong focus on replayability
   - Dedicated friendship system
   - Four personality stats
+  - Future entries planned
 
-The story takes the player through an adventure as they are stranded on a deserted island. Unfortunately, people start being killed off and it's up to the protagonist to make the most of a bad situation.
+Ray & his best friend, Luke, have been invited to partake in a brand new reality TV game show named “Maybe Manawa!?” where a group of contestants must spend thirteen days on Manawa island. Terror suddenly runs rampant throughout the contestants as murders begin occuring - the production company having for certain never mentioned anything of the sort and yet the show goes on. Lead Ray through the thirteen days, befriending other contestants and fighting to survive. Along the way, will Ray make new friends, find romance or uncover something deeper?
